@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="index.css">
+ <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+ <title>Adarsha Secondary School | View Result</title>
+</head>
+<body>
+ 
+
+<main id="main">
+ 
+ <nav>
+  <div class="navbar">
+   <i class="ri-search-2-line" id="icon"></i>
+  <input type="search" placeholder="Enter Your Name,Grade Or ID." id="search">
+  </div>
+ </nav>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div class="stdCont">
+ <div class="displayer">
+<h3 id="Disname">Student Name</h3>
+<h3 id="Disgrade" class="disGrade">Grade</h3>
+<h3 id="DisrollNo">Roll No</h3>
+<h3 id="Dissection" class="disSection">Section</h3> 
+<h3 id="Disid" class="disId">ID</h3> 
+</div>
+<div class="studentDets">
+ 
+</div>
+</div>
+
+</div>
+
+
+
+
+ 
+
+</main>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="index.js"></script>
+<script type="module">
+
+
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+  import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore.js";
+
+ const firebaseConfig = {
+    apiKey: "AIzaSyD8weZ1zwf5AKly19uIIlDX2HJjMl7pqsA",
+    authDomain: "adarsha-secondary-school-e526d.firebaseapp.com",
+    projectId: "adarsha-secondary-school-e526d",
+    storageBucket: "adarsha-secondary-school-e526d.appspot.com",
+    messagingSenderId: "134007763506",
+    appId: "1:134007763506:web:5dc29472d2e6654b73422b"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+  const studentsCollection = collection(db, "Students");
+
+ var cont = document.querySelector('.cont')
+ const fetchData = async () => {
+  const querySnapshot = await getDocs(studentsCollection);
+  var studentDets = document.querySelector(".studentDets");
+var clutter =""
+  querySnapshot.forEach((doc) => {
+
+
+  
+  
+  clutter += `  
+<div class="cont">
+<h3 id="name">${doc.data().Name}</h3>
+<h3 id="grade">${doc.data().Grade}</h3>
+<h3 id="rollNo">${doc.data().RollNo}</h3>
+<h3 id="section">${doc.data().Section}</h3> 
+<h3 id="id">${doc.data().StudentId}</h3>
+</div>`;
+   studentDets.innerHTML=clutter;
+  });
+  setupSearch();
+};
+
+document.addEventListener("DOMContentLoaded", fetchData);
+
+</script>
+
+  
+
+</body>
+</html>

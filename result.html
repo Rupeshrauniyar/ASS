@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML to Image</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    #content {
+        border: 2px solid #333;
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 400px;
+    }
+    #download-btn {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<div id="content">
+    <h1>Hello, world!</h1>
+    <p>This is an HTML page that will be converted to an image.</p>
+</div>
+
+<button id="download-btn">Download Image</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+<script>
+    document.getElementById('download-btn').addEventListener('click', function() {
+        html2canvas(document.getElementById('content'), {
+            onrendered: function(canvas) {
+                var image = canvas.toDataURL('image/png');
+                var link = document.createElement('a');
+                link.download = 'result.png';
+                link.href = image;
+                link.click();
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

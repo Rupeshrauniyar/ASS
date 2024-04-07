@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Adarsha Secondary School | Admin</title>
+ <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+
+<main>
+ <nav></nav>
+ 
+ 
+<div class="container">
+ <form>
+  
+ <input type="name" id="name" placeholder="Enter Students Full Name" required><br>
+  <input type="text" id="grade" placeholder="Enter Students Grade"><br>
+  <input type="number" id="Rollno" placeholder="Enter Students Roll No"><br>
+  <input type="text" id="section" placeholder="Enter Students Section"><br>
+  <input type="number" id="studentId" placeholder="Enter Students IdNo"><br>
+ <input type="submit" value="submit" id="submit">
+  
+ </form>
+</div> 
+ 
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+  
+  import { getFirestore, addDoc, collection } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore.js";
+  
+import { doc, setDoc } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore.js";
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyD8weZ1zwf5AKly19uIIlDX2HJjMl7pqsA",
+    authDomain: "adarsha-secondary-school-e526d.firebaseapp.com",
+    projectId: "adarsha-secondary-school-e526d",
+    storageBucket: "adarsha-secondary-school-e526d.appspot.com",
+    messagingSenderId: "134007763506",
+    appId: "1:134007763506:web:5dc29472d2e6654b73422b"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+  
+  
+var student = document.querySelector('#submit');
+
+
+student.addEventListener('click', function(e){
+var name = document.querySelector('#name').value;
+var grade = document.querySelector('#grade').value;
+var rollNo = document.querySelector('#Rollno').value;
+var section = document.querySelector('#section').value;
+var studentId = document.querySelector('#studentId').value;
+  e.preventDefault(); // prevent form submission
+  addDoc(collection(db, "Students"), {
+    Name: name,
+    Grade: grade,
+    RollNo: rollNo,
+    Section: section,
+    StudentId: studentId,
+  }); 
+  console.log(name)
+  });
+
+</script>
+
+</body>
+</html>
