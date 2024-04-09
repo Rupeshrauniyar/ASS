@@ -1,47 +1,21 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
-  
-  import { getFirestore, setDoc, addDoc,doc, collection } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore.js";
-  
+const setupSearch = () => {
+    const searchInput = document.getElementById('search');
+    const contElements = document.querySelectorAll('.cont');
 
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyD8weZ1zwf5AKly19uIIlDX2HJjMl7pqsA",
-    authDomain: "adarsha-secondary-school-e526d.firebaseapp.com",
-    projectId: "adarsha-secondary-school-e526d",
-    storageBucket: "adarsha-secondary-school-e526d.appspot.com",
-    messagingSenderId: "134007763506",
-    appId: "1:134007763506:web:5dc29472d2e6654b73422b"
-  };
+    searchInput.addEventListener('input', function() {
+        const searchTerm = this.value.toLowerCase();
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
-  
-  
-  var addStudent = document.querySelector('#submit').value
-  var name = document.querySelector('#name').value
-   var grade = document.querySelector('#grade').value
-    var rollNo = document.querySelector('#Rollno').value
-     var section = document.querySelector('#section').value
-      var studentId = document.querySelector('#studentId').value
+        contElements.forEach(function(contElement) {
+            const name = contElement.querySelector('#name').textContent.toLowerCase();
+            const id = contElement.querySelector('#id').textContent.toLowerCase();
+            const grade = contElement.querySelector('#grade').textContent.toLowerCase();
 
+            if (name.includes(searchTerm) || id.includes(searchTerm) || grade.includes(searchTerm)) {
+                contElement.style.display = 'flex';
+            } else {
+                contElement.style.display = 'none';
+            }
+        });
+    });
+};
 
-
-addStudent.addEventListener('click', function(){
-
-
- 
-import { doc, setDoc } from "firebase/firestore"; 
-
-
- addDoc(collection(db, "students"), {
-  Name: name,
-  Grade: grade,
-  Roll No: rollNo,
-  Section: section,
-  Student Id: studentId,
-}); 
- 
- alert("added")
- 
-})

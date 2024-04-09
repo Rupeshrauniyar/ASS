@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;1,400;1,500&family=Open+Sans:wght@500&family=Outfit:wght@100..900&family=Rubik+Glitch&display=swap');
+
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+   font-family: "Outfit", sans-serif;
+   font-weight: 400;
+}
+nav{
+ background-color: #fff;
+  width: 100%;
+  height: 8vh;
+  
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 8vh;
+  
+
+  z-index: 1000; 
+ background-color: #fff;
+}
+
+#icon {
+  position: absolute;
+  left: 27px; /* Adjusted left position */
+  z-index: 999;
+}
+
+#search {
+  padding: 10px 20px;
+  border-radius: 8px;
+  outline: none;
+  width: 90%;
+  border-color: #000;
+  position: relative;
+  padding-left: 25px; /* Added padding to accommodate the icon */
+}
+
+.cont {
+ display: flex;
+ width: 100%;
+ margin-bottom: 6px;
+ border: 0.5px solid #9d9d9dbf;
+ padding:17px 0;
+ border-radius: 10px;
+  /* background: linear-gradient(16deg , #4b90ff , #ff5546); */
+  background-color: #f6f7f8;
+  transition: all .2s ease;
+  
+}
+
+.studentDets{
+ padding: 10px 20px;
+
+}
+
+.cont h3{
+ overflow: hidden;
+ white-space: nowrap;
+ text-overflow: ellipsis;
+ padding: 0  4px;
+ border-right:1px solid #9d9d9dbf ;
+ height: 100%;
+ pointer-events: none;
+}
+.cont h3:nth-last-child(1){
+ border-right:none ;
+}
+#name,#Disname{
+ width: 35%;
+ 
+}
+#grade,#Disgrade{
+ width: 20%;
+
+ 
+}
+#rollNo,#DisrollNo{
+ width: 17%;
+ 
+}
+#section,#Dissection{
+ width: 16%;
+}
+#id,#Disid{
+ width: 26%;
+
+}
+
+.stdCont{
+ margin-top: 10px;
+ transition: all .2s ease;
+}
+.displayer{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ padding: 0 25px;
+ 
+ 
+}
+.displayer h3{
+ overflow: hidden;
+ white-space: nowrap;
+ text-overflow: ellipsis;
+}
+.disId{
+padding-left: 15px;
+}
+.disSection{
+padding-left: 5px; 
+}
+.cont:active{
+ transform: scale(0.9);
+}
+.cont h7{
+ opacity: 0;
+ display: none;
+}
+
+
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+   font-family: "Outfit", sans-serif;
+   font-weight: 400;
+}
+
+
+#name,#Disname{
+ width: 35%;
+ 
+}
+#grade,#Disgrade{
+ width: 20%;
+  
+ 
+}
+#rollNo,#DisrollNo{
+ width: 17%;
+  
+ 
+}
+#section,#Dissection{
+ width: 16%;
+ 
+}
+#id,#Disid{
+ width: 26%;
+ 
+}
+
+.stdCont{
+ margin-top: 10px;
+ transition: all .2s ease;
+  
+}
+.displayer{
+ display: flex;
+
+ 
+ 
+}
+.cont h3{
+ pointer-events: none;
+}
+.displayer h3{
+ overflow: hidden;
+ white-space: nowrap;
+ text-overflow: ellipsis;
+}
+.disId{
+padding-left: 15px;
+}
+.disSection{
+padding-left: 5px; 
+}
+
+
+.management{
+ display: none;
+ min-height: 80vh;
+}
+
+form input{
+  padding: 10px 20px;
+  border-radius: 8px;
+  outline: none;
+  width: 90%;
+  border-color: #000;
+  position: relative;
+  padding-left: 25px; /* Added padding to accommodate the icon */
+}
+.management input{
+ padding: 10px 20px;
+  border-radius: 8px;
+  outline: none;
+  width: 100%;
+  border-color: #000;
+  position: relative;
+  padding-left: 25px; /* Added padding to accommodate the icon */
+} 
+.dropDown button{
+ padding: 10px 20px;
+  border-radius: 8px;
+  outline: none;
+  width: 100%;
+  border-color: #000;
+  position: relative;
+  padding-left: 25px; /* Added padding to accommodate the icon */
+} 
+
+.container{
+ padding: 20px 20px;
+ 
+}
+
+select{
+ cursor: pointer;
+}
+
+.dropDown{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+}
+
+.mainCont{
+ padding: 15px 0;
+}
+.buttonCont{
+display: flex;
+align-items: center;
+justify-content: center;
+width: 100%;
+right: 0;
+top: 0;
+height: 10vh;
+}
+.buttonCont button{
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 10px 10px;
+margin-left: 80%;
+top: 0; 
+border-radius: 8px;
+}
+#save{
+ padding: 10px 20px;
+  border-radius: 8px;
+  outline: none;
+  width: 100%;
+  border-color: #000;
+  position: relative;
+  padding-left: 25px; /* Added padding to accommodate the icon */ 
+}

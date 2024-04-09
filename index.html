@@ -95,7 +95,7 @@
   const db = getFirestore(app);
   const studentsCollection = collection(db, "Students");
 
- var cont = document.querySelector('.cont')
+
  const fetchData = async () => {
   const querySnapshot = await getDocs(studentsCollection);
   var studentDets = document.querySelector(".studentDets");
@@ -103,8 +103,6 @@ var clutter =""
   querySnapshot.forEach((doc) => {
 
 
-  
-  
   clutter += `  
 <div class="cont">
 <h3 id="name">${doc.data().Name}</h3>
@@ -112,13 +110,250 @@ var clutter =""
 <h3 id="rollNo">${doc.data().RollNo}</h3>
 <h3 id="section">${doc.data().Section}</h3> 
 <h3 id="id">${doc.data().StudentId}</h3>
-</div>`;
-   studentDets.innerHTML=clutter;
-  });
+
+<!-- English -->
+<h7 id="EnglishCredit">${doc.data().Subject.English.EnglishCredit}</h7>
+<h7 id="EnglishTH">${doc.data().Subject.English.EnglishTH}</h7>
+<h7 id="EnglishIN">${doc.data().Subject.English.EnglishIN}</h7>
+<h7 id="EnglishGrade">${doc.data().Subject.English.EnglishGrade}</h7>
+<h7 id="EnglishGradePoint">${doc.data().Subject.English.EnglishGradePoint}</h7>
+<h7 id="EnglishRemarks">${doc.data().Subject.English.EnglishRemarks}</h7>
+
+
+<!-- Nepali -->
+<h7 id="NepaliCredit">${doc.data().Subject.Nepali.NepaliCredit}</h7>
+<h7 id="NepaliTH">${doc.data().Subject.Nepali.NepaliTH}</h7>
+<h7 id="NepaliIN">${doc.data().Subject.Nepali.NepaliIN}</h7>
+<h7 id="NepaliGrade">${doc.data().Subject.Nepali.NepaliGrade}</h7>
+<h7 id="NepaliGradePoint">${doc.data().Subject.Nepali.NepaliGradePoint}</h7>
+<h7 id="NepaliRemarks">${doc.data().Subject.Nepali.NepaliRemarks}</h7>
+
+<!-- Math -->
+<h7 id="MathCredit">${doc.data().Subject.Math.MathCredit}</h7>
+<h7 id="MathTH">${doc.data().Subject.Math.MathTH}</h7>
+<h7 id="MathIN">${doc.data().Subject.Math.MathIN}</h7>
+<h7 id="MathGrade">${doc.data().Subject.Math.MathGrade}</h7>
+<h7 id="MathGradePoint">${doc.data().Subject.Math.MathGradePoint}</h7>
+<h7 id="MathRemarks">${doc.data().Subject.Math.MathRemarks}</h7>
+
+<!-- Science -->
+<h7 id="ScienceCredit">${doc.data().Subject.Science.ScienceCredit}</h7>
+<h7 id="ScienceTH">${doc.data().Subject.Science.ScienceTH}</h7>
+<h7 id="ScienceIN">${doc.data().Subject.Science.ScienceIN}</h7>
+<h7 id="ScienceGrade">${doc.data().Subject.Science.ScienceGrade}</h7>
+<h7 id="ScienceGradePoint">${doc.data().Subject.Science.ScienceGradePoint}</h7>
+<h7 id="ScienceRemarks">${doc.data().Subject.Science.ScienceRemarks}</h7>
+
+<!-- Social -->
+<h7 id="SocialCredit">${doc.data().Subject.Social.SocialCredit}</h7>
+<h7 id="SocialTH">${doc.data().Subject.Social.SocialTH}</h7>
+<h7 id="SocialIN">${doc.data().Subject.Social.SocialIN}</h7>
+<h7 id="SocialGrade">${doc.data().Subject.Social.SocialGrade}</h7>
+<h7 id="SocialGradePoint">${doc.data().Subject.Social.SocialGradePoint}</h7>
+<h7 id="SocialRemarks">${doc.data().Subject.Social.SocialRemarks}</h7>
+
+<!-- Opt1 -->
+<h7 id="Opt1Credit">${doc.data().Subject.Opt1.Opt1Credit}</h7>
+<h7 id="Opt1TH">${doc.data().Subject.Opt1.Opt1TH}</h7>
+<h7 id="Opt1IN">${doc.data().Subject.Opt1.Opt1IN}</h7>
+<h7 id="Opt1Grade">${doc.data().Subject.Opt1.Opt1Grade}</h7>
+<h7 id="Opt1GradePoint">${doc.data().Subject.Opt1.Opt1GradePoint}</h7>
+<h7 id="Opt1Remarks">${doc.data().Subject.Opt1.Opt1Remarks}</h7>
+
+<!-- Opt2 -->
+<h7 id="Opt2Credit">${doc.data().Subject.Opt2.Opt2Credit}</h7>
+<h7 id="Opt2TH">${doc.data().Subject.Opt2.Opt2TH}</h7>
+<h7 id="Opt2IN">${doc.data().Subject.Opt2.Opt2IN}</h7>
+<h7 id="Opt2Grade">${doc.data().Subject.Opt2.Opt2Grade}</h7>
+<h7 id="Opt2GradePoint">${doc.data().Subject.Opt2.Opt2GradePoint}</h7>
+<h7 id="Opt2Remarks">${doc.data().Subject.Opt2.Opt2Remarks}</h7>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+`;
+studentDets.innerHTML=clutter;
+const conts = document.querySelectorAll('.cont');
+conts.forEach((cont) => {
+cont.addEventListener("click", function(event){
+
+
+
+
+
+var name = event.currentTarget.querySelector('#name').textContent;
+var grade = event.currentTarget.querySelector('#grade').textContent;
+var rollNo = event.currentTarget.querySelector('#rollNo').textContent;
+var section = event.currentTarget.querySelector('#section').textContent;
+var section = event.currentTarget.querySelector('#section').textContent;
+var id = event.currentTarget.querySelector('#id').textContent;
+
+// English
+var EnglishCredit = event.currentTarget.querySelector('#EnglishCredit').textContent;
+var EnglishTH = event.currentTarget.querySelector('#EnglishTH').textContent;
+var EnglishIN = event.currentTarget.querySelector('#EnglishIN').textContent;
+var EnglishGrade = event.currentTarget.querySelector('#EnglishGrade').textContent;
+var EnglishGradePoint = event.currentTarget.querySelector('#EnglishGradePoint').textContent;
+var EnglishRemarks = event.currentTarget.querySelector('#EnglishRemarks').textContent;
+
+// Nepali
+var NepaliCredit = event.currentTarget.querySelector('#NepaliCredit').textContent;
+var NepaliTH = event.currentTarget.querySelector('#NepaliTH').textContent;
+var NepaliIN = event.currentTarget.querySelector('#NepaliIN').textContent;
+var NepaliGrade = event.currentTarget.querySelector('#NepaliGrade').textContent;
+var NepaliGradePoint = event.currentTarget.querySelector('#NepaliGradePoint').textContent;
+var NepaliRemarks = event.currentTarget.querySelector('#NepaliRemarks').textContent;
+
+// Math
+var MathCredit = event.currentTarget.querySelector('#MathCredit').textContent;
+var MathTH = event.currentTarget.querySelector('#MathTH').textContent;
+var MathIN = event.currentTarget.querySelector('#MathIN').textContent;
+var MathGrade = event.currentTarget.querySelector('#MathGrade').textContent;
+var MathGradePoint = event.currentTarget.querySelector('#MathGradePoint').textContent;
+var MathRemarks = event.currentTarget.querySelector('#MathRemarks').textContent;
+
+// Science
+var ScienceCredit = event.currentTarget.querySelector('#ScienceCredit').textContent;
+var ScienceTH = event.currentTarget.querySelector('#ScienceTH').textContent;
+var ScienceIN = event.currentTarget.querySelector('#ScienceIN').textContent;
+var ScienceGrade = event.currentTarget.querySelector('#ScienceGrade').textContent;
+var ScienceGradePoint = event.currentTarget.querySelector('#ScienceGradePoint').textContent;
+var ScienceRemarks = event.currentTarget.querySelector('#ScienceRemarks').textContent;
+
+// Social
+var SocialCredit = event.currentTarget.querySelector('#SocialCredit').textContent;
+var SocialTH = event.currentTarget.querySelector('#SocialTH').textContent;
+var SocialIN = event.currentTarget.querySelector('#SocialIN').textContent;
+var SocialGrade = event.currentTarget.querySelector('#SocialGrade').textContent;
+var SocialGradePoint = event.currentTarget.querySelector('#SocialGradePoint').textContent;
+var SocialRemarks = event.currentTarget.querySelector('#SocialRemarks').textContent;
+
+// Opt1
+var Opt1Credit = event.currentTarget.querySelector('#Opt1Credit').textContent;
+var Opt1TH = event.currentTarget.querySelector('#Opt1TH').textContent;
+var Opt1IN = event.currentTarget.querySelector('#Opt1IN').textContent;
+var Opt1Grade = event.currentTarget.querySelector('#Opt1Grade').textContent;
+var Opt1GradePoint = event.currentTarget.querySelector('#Opt1GradePoint').textContent;
+var Opt1Remarks = event.currentTarget.querySelector('#Opt1Remarks').textContent;
+
+// Opt2
+var Opt2Credit = event.currentTarget.querySelector('#Opt2Credit').textContent;
+var Opt2TH = event.currentTarget.querySelector('#Opt2TH').textContent;
+var Opt2IN = event.currentTarget.querySelector('#Opt2IN').textContent;
+var Opt2Grade = event.currentTarget.querySelector('#Opt2Grade').textContent;
+var Opt2GradePoint = event.currentTarget.querySelector('#Opt2GradePoint').textContent;
+var Opt2Remarks = event.currentTarget.querySelector('#Opt2Remarks').textContent;
+
+
+
+
+console.log(name)
+console.log(grade)
+console.log(rollNo)
+console.log(section)
+console.log(id)
+
+
+// English
+console.log("English:");
+console.log(EnglishCredit);
+console.log(EnglishTH);
+console.log(EnglishIN);
+console.log(EnglishGrade);
+console.log(EnglishGradePoint);
+console.log(EnglishRemarks);
+
+// Nepali
+console.log("Nepali:");
+console.log(NepaliCredit);
+console.log(NepaliTH);
+console.log(NepaliIN);
+console.log(NepaliGrade);
+console.log(NepaliGradePoint);
+console.log(NepaliRemarks);
+
+// Math
+console.log("Math:");
+console.log(MathCredit);
+console.log(MathTH);
+console.log(MathIN);
+console.log(MathGrade);
+console.log(MathGradePoint);
+console.log(MathRemarks);
+
+// Science
+console.log("Science:");
+console.log(ScienceCredit);
+console.log(ScienceTH);
+console.log(ScienceIN);
+console.log(ScienceGrade);
+console.log(ScienceGradePoint);
+console.log(ScienceRemarks);
+
+// Social
+console.log("Social:");
+console.log(SocialCredit);
+console.log(SocialTH);
+console.log(SocialIN);
+console.log(SocialGrade);
+console.log(SocialGradePoint);
+console.log(SocialRemarks);
+
+// Opt1
+console.log("Opt1:");
+console.log(Opt1Credit);
+console.log(Opt1TH);
+console.log(Opt1IN);
+console.log(Opt1Grade);
+console.log(Opt1GradePoint);
+console.log(Opt1Remarks);
+
+// Opt2
+console.log("Opt2:");
+console.log(Opt2Credit);
+console.log(Opt2TH);
+console.log(Opt2IN);
+console.log(Opt2Grade);
+console.log(Opt2GradePoint);
+console.log(Opt2Remarks);
+
+
+
+
+
+
+
+
+ });
+
+
+
+
+
+  })
+  }) 
+    
+        
+
   setupSearch();
 };
 
 document.addEventListener("DOMContentLoaded", fetchData);
+
 
 </script>
 
