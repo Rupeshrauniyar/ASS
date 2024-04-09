@@ -30,7 +30,13 @@ nav{
   left: 27px; /* Adjusted left position */
   z-index: 999;
 }
-
+#inpIcon{
+  position: absolute;
+  left: 35px; /* Adjusted left position */
+  z-index: 999;
+  margin-top: 22px;
+  
+}
 #search {
   padding: 10px 20px;
   border-radius: 8px;
@@ -193,10 +199,14 @@ form input{
   border-radius: 8px;
   outline: none;
   width: 90%;
-  border-color: #000;
+  
   position: relative;
   padding-left: 25px; /* Added padding to accommodate the icon */
+  margin: 10px;
+  border-color: #000;
+
 }
+
 .management input{
  padding: 10px 20px;
   border-radius: 8px;
@@ -261,4 +271,99 @@ border-radius: 8px;
   border-color: #000;
   position: relative;
   padding-left: 25px; /* Added padding to accommodate the icon */ 
+  color: #fff;
+  background-color:#2fb477 ;
+  outline: none;
+  
+  border: none;
+}
+#closeBtn{
+ color: #fff;
+ background-color: red;
+ border: none;
+}
+
+.delete{
+ color: #fff;
+ background-color:#e75b66;
+ border: none; 
+}
+.edit{
+ color: #fff;
+ background-color: #40a1ff;
+ border: none; 
+ margin-top: 10px; 
+}
+#submit{
+ width: 100%;
+ background-color:#2fb477 ;
+ border: none;
+ color: #fff;
+ padding: 10px 20px;
+  border-radius: 8px;
+  outline: none;  
+  border-color: #000;
+  position: relative;
+  padding-left: 25px; /* Added padding to accommodate the icon */
+}
+.addDiv,.deleteDiv,.saveDiv{
+ position: fixed;
+ width: 100%;
+ height: 50vh;
+ background-color: #f0f0f0;
+ z-index: 9999;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ display: none;
+ transform: translate(0,50%);
+}
+.addDiv{
+ display: none;
+}
+#deleteOk{
+ padding: 10px 20px;
+  border-radius: 8px;
+  outline: none;
+  border-color: #000;
+  position: relative;
+  padding-left: 25px; /* Added padding to accommodate the icon */ 
+  color: #fff;
+  background-color:#2fb477 ;
+  outline: none;
+  border: none; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#addOk{
+ padding: 10px 20px;
+  border-radius: 8px;
+  outline: none; 
+  border-color: #000;
+  position: relative;
+  padding-left: 25px; /* Added padding to accommodate the icon */ 
+  color: #fff;
+  background-color:#2fb477 ;
+  outline: none;
+  border: none; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#saveOk{
+ padding: 10px 20px;
+  border-radius: 8px;
+  outline: none; 
+  border-color: #000;
+  position: relative;
+  padding-left: 25px; /* Added padding to accommodate the icon */ 
+  color: #fff;
+  background-color:#2fb477 ;
+  outline: none;
+  border: none; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

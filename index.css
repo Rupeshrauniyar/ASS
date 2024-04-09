@@ -6,11 +6,12 @@
  box-sizing: border-box;
    font-family: "Outfit", sans-serif;
    font-weight: 400;
+  
 }
 nav{
  background-color: #fff;
   width: 100%;
-  height: 8vh;
+  min-height: 8vh;
   
 }
 .navbar {
@@ -121,4 +122,102 @@ padding-left: 5px;
 .cont h7{
  opacity: 0;
  display: none;
+}
+.page2{
+ width: 100vw;
+ height: 200vh;
+ position: absolute;
+ background-color: #dadada;
+ z-index: 1000000;
+ transform: translate(100%,0);
+ display: none;
+ overflow: hidden;
+}
+.page2NavPart2{
+ display: flex;  
+ text-align: center;
+ align-items: center;
+ flex-direction: column;
+}
+
+.page2Details{
+  padding: 5px 20px;
+  margin-top: 10px;
+  
+ }
+.page2Details p{ 
+ font-size: 15px;
+}
+.page2 hr{
+ width: 90%;
+}
+
+#download-btn{
+  padding: 10px 20px;
+  border-radius: 8px;
+  outline: none;
+ 
+  border-color: #000;
+  position: relative;
+  padding-left: 25px; /* Added padding to accommodate the icon */ 
+  color: #fff;
+  background-color:#2fb477 ;
+  outline: none;
+  border: none; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.buttonCont{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ margin-top: 10px;
+}
+#table1{
+ margin-top: 20px;
+ margin-bottom: 20px;
+}
+#table1 th{
+ border-right: 1px solid #000;
+ border-bottom: 1px solid #000;
+}
+table th:nth-last-child(1){
+ border-right:none; 
+}
+
+#table3 th{
+ border: 1px solid #000;
+}
+#table2 th{
+ border: 1px solid #000;
+}
+#table3{
+display:none ;
+}
+.page2Bottom{
+
+ align-items: center;
+justify-content: center;
+ 
+}
+#showMore{
+padding: 10px 20px;
+  border-radius: 8px;
+  outline: none; 
+  border-color: #000;
+  position: relative;
+  padding-left: 25px; /* Added padding to accommodate the icon */ 
+  color: #fff;
+  background-color:#2fb477 ;
+  outline: none;
+  border: none; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.center{
+ display: flex;
+ align-items: center;
+ justify-content: center;
 }
