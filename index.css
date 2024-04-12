@@ -8,6 +8,7 @@
    font-weight: 400;
   
 }
+
 nav{
  background-color: #fff;
   width: 100%;
@@ -26,10 +27,12 @@ nav{
  background-color: #fff;
 }
 
-#icon {
+#inpIcon{
   position: absolute;
-  left: 27px; /* Adjusted left position */
+  left: 7vw; 
   z-index: 999;
+
+  
 }
 
 #search {
@@ -41,7 +44,9 @@ nav{
   position: relative;
   padding-left: 25px; /* Added padding to accommodate the icon */
 }
-
+input{
+ position: relative;
+}
 .cont {
  display: flex;
  width: 100%;
@@ -125,9 +130,9 @@ padding-left: 5px;
 }
 .page2{
  width: 100vw;
- height: 200vh;
+ min-height: 100vh;
  position: absolute;
- background-color: #dadada;
+ background-color: #fff;
  z-index: 1000000;
  transform: translate(100%,0);
  display: none;
@@ -141,8 +146,9 @@ padding-left: 5px;
 }
 
 .page2Details{
-  padding: 5px 20px;
-  margin-top: 10px;
+  padding: 10px 20px;
+ 
+  background-color: #fff;
   
  }
 .page2Details p{ 
@@ -172,11 +178,18 @@ padding-left: 5px;
  display: flex;
  align-items: center;
  justify-content: center;
- margin-top: 10px;
+ width: 100%; 
+padding: 10px 0;
+}
+table{
+ background-color: #fff;
+ 
+}
+.contss{
+ width: 100%;
 }
 #table1{
- margin-top: 20px;
- margin-bottom: 20px;
+ background-color: #fff;
 }
 #table1 th{
  border-right: 1px solid #000;
@@ -196,7 +209,7 @@ table th:nth-last-child(1){
 display:none ;
 }
 .page2Bottom{
-
+background-color: #fff;
  align-items: center;
 justify-content: center;
  
@@ -215,9 +228,182 @@ padding: 10px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top:4px;
 }
 .center{
  display: flex;
  align-items: center;
  justify-content: center;
+}
+
+.loaderCont{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ margin-top: 50px;
+}
+
+
+.lds-ripple,
+.lds-ripple div {
+  box-sizing: border-box;
+}
+.lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid currentColor;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 8px;
+    height: 8px;
+    opacity: 0;
+  }
+  4.9% {
+    top: 36px;
+    left: 36px;
+    width: 8px;
+    height: 8px;
+    opacity: 0;
+  }
+  5% {
+    top: 36px;
+    left: 36px;
+    width: 8px;
+    height: 8px;
+    opacity: 1;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    opacity: 0;
+  }
+}
+
+.refreshPage{
+ display: none;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ position: fixed;
+ background-color: #dadada;
+ width: 100%;
+ height: 40vh;
+ transform: translate(0,50%);
+}
+.refreshPage p{
+ margin-top: 40px;
+ text-align: center;
+}
+#refresh{
+padding: 10px 20px;
+  border-radius: 8px;
+  outline: none; 
+  border-color: #000;
+  position: relative;
+  padding-left: 25px; /* Added padding to accommodate the icon */ 
+  color: #fff;
+  background-color:#2fb477 ;
+  outline: none;
+  border: none; 
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  
+  margin-top: 30px;
+}
+
+
+button:active{
+ transform: scale(0.95);
+}
+
+button{
+ transition: all .1s ease;
+}
+.paymentPage{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ text-align: center;
+ position: fixed;
+ flex-direction: column;
+ width: 100%;
+ height: 100%;
+ background-color: #fff;
+ z-index: 99999999999999;
+}
+.paymentPage h3{
+ color: red;
+}
+.paymentPage p{
+
+ color:green;
+}
+
+
+ .terminalDis p{
+  position: absolute;
+  color: red;
+  z-index: 999;
+  padding:0 4px;
+   overflow: hidden;
+ white-space: nowrap;
+ text-overflow: ellipsis;
+ width: 20%;
+ top: 0;
+ }
+.cont{
+ position: relative;
+}
+
+#BackBtn{
+padding: 10px 20px;
+  border-radius: 8px;
+  outline: none; 
+  border-color: #000;
+  position: relative;
+  padding-left: 25px; /* Added padding to accommodate the icon */ 
+  color: #fff;
+  background-color:#2fb477 ;
+  outline: none;
+  border: none; 
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  
+  margin-top: 30px; 
+}
+.subjects{
+background-color: #fff; 
+width: 100%;
+height: 100%;
+}
+#back{
+
+  border-radius: 50%;  
+  padding: 20px 20px;
+  color: #fff;
+  background-color:#2fb477 ;
+  
+ 
+}
+
+.resultBackCont{
+ padding: 20px 2px;
 }

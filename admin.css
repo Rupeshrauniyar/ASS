@@ -62,7 +62,7 @@ nav{
 
 .studentDets{
  padding: 10px 20px;
-
+min-height: 85vh;
 }
 
 .cont h3{
@@ -198,8 +198,7 @@ form input{
   padding: 10px 20px;
   border-radius: 8px;
   outline: none;
-  width: 90%;
-  
+  width: 90%;  
   position: relative;
   padding-left: 25px; /* Added padding to accommodate the icon */
   margin: 10px;
@@ -220,10 +219,9 @@ form input{
  padding: 10px 20px;
   border-radius: 8px;
   outline: none;
-  width: 100%;
   border-color: #000;
   position: relative;
-  padding-left: 25px; /* Added padding to accommodate the icon */
+  margin: 10px;
 } 
 
 .container{
@@ -233,13 +231,14 @@ form input{
 
 select{
  cursor: pointer;
+ 
 }
 
 .dropDown{
  display: flex;
  align-items: center;
  justify-content: center;
- flex-direction: column;
+
 }
 
 .mainCont{
@@ -261,6 +260,7 @@ justify-content: center;
 padding: 10px 10px;
 margin-left: 80%;
 top: 0; 
+
 border-radius: 8px;
 }
 #save{
@@ -287,12 +287,13 @@ border-radius: 8px;
  color: #fff;
  background-color:#e75b66;
  border: none; 
+ 
 }
 .edit{
  color: #fff;
  background-color: #40a1ff;
  border: none; 
- margin-top: 10px; 
+ 
 }
 #submit{
  width: 100%;
@@ -366,4 +367,63 @@ border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+#InpGPA,#InpAttendence{
+ width: 60%;
+}
+.resultDets input{
+ width: 60%;
+ margin-bottom: 1px;
+}
+.resultDets{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+}
+.paymentDiv{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ margin-bottom: 20px;
+}
+button:active{
+ transform: scale(0.95);
+}
+
+button{
+ transition: all .1s ease;
+}
+.custom-select {
+    appearance: none; /* Removes default styling */
+    -webkit-appearance: none; /* For older versions of Safari */
+    -moz-appearance: none; /* For older versions of Firefox */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .custom-select option {
+    padding: 10px;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+
+ .terminalDis p{
+  position: absolute;
+  color: red;
+  z-index: 999;
+  padding:0 4px;
+   overflow: hidden;
+ white-space: nowrap;
+ text-overflow: ellipsis;
+ width: 20%;
+ top: 0;
+ }
+.cont{
+ position: relative;
 }

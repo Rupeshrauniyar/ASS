@@ -18,17 +18,33 @@
 
 
 <div class="page2">
+ 
+<div class="paymentPage">
+<h3>Please Clear All Remaining Due's Inorder To View The Result.</h3> 
+<p>For More Information You Can Conact On  <p>021-521647</p></p>
+<br>
+<br>
+<br>
+<br>
 
- <div id="content">
-  
- <nav>
+  <div class="page2NavPart2">
+  <h3>Adarsha Secondary School</h3>
+  <p>Biratnagar-7 Morang, Nepal</p>
+ 
+<button id="BackBtn">Back</button>
+  </div>
+</div>
+  <div class="resultBackCont">
   <i class="ri-arrow-left-line" id="back"></i> 
+  </div>
+ <div id="content">
+   <nav>
   <div class="page2NavPart2">
   <h3>Adarsha Secondary School</h3>
   <p>Biratnagar-7 Morang, Nepal</p>
   <p>021-521647</p>
   <h4>progress report</h4>
-  <h5>Annual Examination-2080</h5>
+  <h5 id="resultTerminal"></h5>
   </div>
  </nav>
  
@@ -41,6 +57,7 @@
 </div> 
 <center><hr></center>
 <div class="subjects">
+
 <center><table id="table1">
  <tr>
   <th rowspan="2">S.N.</th>
@@ -115,7 +132,7 @@
 
 <tr>
     <th>6</th>
-    <th>Opt1</th>
+    <th>OPTIONAL-MATHEMATICS</th>
     <th id="Opt1resultCredit"></th>
     <th id="Opt1resultTH"></th>
     <th id="Opt1resultIN"></th>
@@ -126,7 +143,7 @@
 
 <tr>
     <th>7</th>
-    <th>Opt2</th>
+    <th>OPTIONAL-COMPUTER</th>
     <th id="Opt2resultCredit"></th>
     <th id="Opt2resultTH"></th>
     <th id="Opt2resultIN"></th>
@@ -134,21 +151,41 @@
     <th id="Opt2resultGradePoint"></th>
     <th id="Opt2resultRemarks"></th>
 </tr>
+<tr>
+    <th>8</th>
+    <th>OCCUPATION</th>
+    <th id="OccupationresultCredit"></th>
+    <th id="OccupationresultTH"></th>
+    <th id="OccupationresultIN"></th>
+    <th id="OccupationresultGrade"></th>
+    <th id="OccupationresultGradePoint"></th>
+    <th id="OccupationresultRemarks"></th>
+</tr>
+<tr>
+    <th>9</th>
+    <th>HEALTH</th>
+    <th id="HealthresultCredit"></th>
+    <th id="HealthresultTH"></th>
+    <th id="HealthresultIN"></th>
+    <th id="HealthresultGrade"></th>
+    <th id="HealthresultGradePoint"></th>
+    <th id="HealthresultRemarks"></th>
+</tr>
+
 
 </table></center>
-<center><hr></center>
 </div>
 <center><div class="page2Bottom">
  <table id="table2">
  <tr>
   <th>GPA</th>
-  <th>2.68</th>
+  <th id="GPA">2.68</th>
  </tr>
  <tr>
   <th>
-   ATTENDANCE 
+   Attendence 
   </th>
-  <th>191</th>
+  <th id="Attendence">191</th>
  </tr>
 </table>
 <button id="showMore">Show More</button>
@@ -234,7 +271,7 @@
 
  <nav>
   <div class="navbar">
-   <i class="ri-search-2-line" id="icon"></i>
+   <i class="ri-search-2-line" id="inpIcon"></i>
   <input type="search" placeholder="Enter Your Name,Grade Or ID." id="search">
   </div>
  </nav>
@@ -254,6 +291,14 @@
 <h3 id="Disid" class="disId">ID</h3> 
 </div>
 <div class="studentDets">
+ <div class="center">
+  <div class="refreshPage">
+   <p>Please Check Your Internet Connection And <br>Try Again Later.</p>
+  <button id="refresh"><h3>Refresh Page</h3><i class="ri-refresh-line"></i></button>
+ </div>
+<div class="lds-ripple"><div>
+</div>
+</div>
  
 </div>
 </div>
@@ -294,12 +339,41 @@
 
 <script src="index.js"></script>
 <script type="module">
+
+var refreshPage = document.querySelector(".refreshPage");
+var loader = document.querySelector(".lds-ripple");
+
+function Set() {
+  var loader = document.querySelector(".lds-ripple");
+  var refreshPage = document.querySelector(".refreshPage");
+
+  setTimeout(() => {
+    loader.style.display = "none";
+    refreshPage.style.display = "flex";
+  }, 9000);
+}
+Set()
+
+  
+
+
+var refreshBtn = document.querySelector("#refresh");
+refreshBtn.addEventListener("click", function () {
+  fetchData();
+  Set();
+  loader.style.display = "flex";
+  refreshPage.style.display = "none";
+});
+
+
+
+
 document.getElementById('download-btn').addEventListener('click', function() {
         html2canvas(document.getElementById('content'), {
             onrendered: function(canvas) {
-                var image = canvas.toDataURL('image/png');
+                var image = canvas.toDataURL('image/jpg');
                 var link = document.createElement('a');
-                link.download = 'result.png';
+                link.download = 'result.jpg';
                 link.href = image;
                 link.click();
             }
@@ -331,14 +405,20 @@ var clutter =""
   querySnapshot.forEach((doc) => {
 
 
-  clutter += `  
-<div class="cont">
+  clutter += ` 
+ 
+ <div class="cont">
+ <div class="terminalDis">
+   <p id="terminal">${doc.data().TERMINAL}</p> 
+  </div>
 <h3 id="name">${doc.data().Name}</h3>
 <h3 id="grade">${doc.data().Grade}</h3>
 <h3 id="rollNo">${doc.data().RollNo}</h3>
 <h3 id="section">${doc.data().Section}</h3> 
 <h3 id="id">${doc.data().StudentId}</h3>
 
+
+<h7 id="payment">${doc.data().PAYMENT}</h7>
 <!-- English -->
 <h7 id="EnglishCredit">${doc.data().Subject.English.EnglishCredit}</h7>
 <h7 id="EnglishTH">${doc.data().Subject.English.EnglishTH}</h7>
@@ -397,7 +477,26 @@ var clutter =""
 <h7 id="Opt2Remarks">${doc.data().Subject.Opt2.Opt2Remarks}</h7>
 
 
+<!-- Occupation -->
+<h7 id="OccupationCredit">${doc.data().Subject.Occupation.OccupationCredit}</h7>
+<h7 id="OccupationTH">${doc.data().Subject.Occupation.OccupationTH}</h7>
+<h7 id="OccupationIN">${doc.data().Subject.Occupation.OccupationIN}</h7>
+<h7 id="OccupationGrade">${doc.data().Subject.Occupation.OccupationGrade}</h7>
+<h7 id="OccupationGradePoint">${doc.data().Subject.Occupation.OccupationGradePoint}</h7>
+<h7 id="OccupationRemarks">${doc.data().Subject.Occupation.OccupationRemarks}</h7>
 
+
+<!-- Health -->
+<h7 id="HealthCredit">${doc.data().Subject.Health.HealthCredit}</h7>
+<h7 id="HealthTH">${doc.data().Subject.Health.HealthTH}</h7>
+<h7 id="HealthIN">${doc.data().Subject.Health.HealthIN}</h7>
+<h7 id="HealthGrade">${doc.data().Subject.Health.HealthGrade}</h7>
+<h7 id="HealthGradePoint">${doc.data().Subject.Health.HealthGradePoint}</h7>
+<h7 id="HealthRemarks">${doc.data().Subject.Health.HealthRemarks}</h7>
+
+
+<h7 id="disGPA">${doc.data().GPA}</h7>
+<h7 id="disAttendence">${doc.data().Attendence}</h7>
 
 
 
@@ -415,6 +514,9 @@ var clutter =""
 
 `;
 studentDets.innerHTML=clutter;
+
+
+
 const conts = document.querySelectorAll('.cont');
 conts.forEach((cont) => {
 cont.addEventListener("click", function(event){
@@ -423,7 +525,7 @@ var page2 = document.querySelector(".page2")
 page2.style.transform="translate(0,0)"
 page2.style.display="block"
 var back = document.querySelector("#back")
-var showMore = document.querySelector("#showMore")
+var showMores = document.querySelectorAll("#showMore")
 var table3 = document.querySelector("#table3")
 
 
@@ -431,16 +533,23 @@ back.addEventListener("click", function(){
 page2.style.transform="translate(100%,0)"
 page2.style.display="none" 
 })
-
+let flag = 0;
+showMores.forEach(showMore => {
 showMore.addEventListener("click", function() {
-    if (table3.style.display === "none" || table3.style.display === "") {
- showMore.textContent="Show Less"
-        table3.style.display = "flex"; // Display div as flex
-    } else {
-        showMore.textContent = "Show More";
-        table3.style.display = "none"; // Hide div
-    }
+
+if (flag === 0) {
+            showMore.textContent = "Show Less";
+            table3.style.display = "flex";
+            flag=1 
+}
+else {
+            showMore.textContent = "Show More";
+            table3.style.display = "none"; 
+            flag=0
+}
+    });
 });
+
 
 var name = event.currentTarget.querySelector('#name').textContent;
 var grade = event.currentTarget.querySelector('#grade').textContent;
@@ -448,6 +557,23 @@ var rollNo = event.currentTarget.querySelector('#rollNo').textContent;
 var section = event.currentTarget.querySelector('#section').textContent;
 var section = event.currentTarget.querySelector('#section').textContent;
 var id = event.currentTarget.querySelector('#id').textContent;
+var terminal = event.currentTarget.querySelector('#terminal').textContent;
+
+
+var payment = event.currentTarget.querySelector('#payment').textContent;
+
+
+var paymentPage = document.querySelector(".paymentPage");
+
+if (payment === "Not Cleared") {
+ paymentPage.style.display="flex" 
+ 
+}
+else {
+paymentPage.style.display="none"
+
+}
+
 
 
 document.querySelector("#resultName").textContent = name;
@@ -455,6 +581,7 @@ document.querySelector("#resultGrade").textContent = grade;
 document.querySelector("#resultRollNo").textContent = rollNo;
 document.querySelector("#resultSection").textContent = section;
 document.querySelector("#resultStudentId").textContent = id;
+document.querySelector("#resultTerminal").textContent = terminal ;
 
 
 
@@ -515,6 +642,28 @@ var Opt2Grade = event.currentTarget.querySelector('#Opt2Grade').textContent;
 var Opt2GradePoint = event.currentTarget.querySelector('#Opt2GradePoint').textContent;
 var Opt2Remarks = event.currentTarget.querySelector('#Opt2Remarks').textContent;
 
+// Occupation
+var OccupationCredit = event.currentTarget.querySelector('#OccupationCredit').textContent;
+var OccupationTH = event.currentTarget.querySelector('#OccupationTH').textContent;
+var OccupationIN = event.currentTarget.querySelector('#OccupationIN').textContent;
+var OccupationGrade = event.currentTarget.querySelector('#OccupationGrade').textContent;
+var OccupationGradePoint = event.currentTarget.querySelector('#OccupationGradePoint').textContent;
+var OccupationRemarks = event.currentTarget.querySelector('#OccupationRemarks').textContent;
+
+
+// Health
+var HealthCredit = event.currentTarget.querySelector('#HealthCredit').textContent;
+var HealthTH = event.currentTarget.querySelector('#HealthTH').textContent;
+var HealthIN = event.currentTarget.querySelector('#HealthIN').textContent;
+var HealthGrade = event.currentTarget.querySelector('#HealthGrade').textContent;
+var HealthGradePoint = event.currentTarget.querySelector('#HealthGradePoint').textContent;
+var HealthRemarks = event.currentTarget.querySelector('#HealthRemarks').textContent;
+
+
+var disGPA = event.currentTarget.querySelector('#disGPA').textContent;
+
+
+var disAttendence = event.currentTarget.querySelector('#disAttendence').textContent;
 
 
 
@@ -526,8 +675,13 @@ function updateSubjectResults(subject, credit, th, in_, grade, gradePoint, remar
     document.querySelector(`#${subject}resultGrade`).textContent = grade;
     document.querySelector(`#${subject}resultGradePoint`).textContent = gradePoint;
     document.querySelector(`#${subject}resultRemarks`).textContent = remarks;
+  
 }
-
+function updateMarks(GPA , Attendence){
+document.querySelector(`#GPA`).textContent = disGPA; 
+document.querySelector(`#Attendence`).textContent = disAttendence; 
+ 
+}
 // Update English subject
 updateSubjectResults("English", EnglishCredit, EnglishTH, EnglishIN, EnglishGrade, EnglishGradePoint, EnglishRemarks);
 
@@ -549,6 +703,16 @@ updateSubjectResults("Opt1", Opt1Credit, Opt1TH, Opt1IN, Opt1Grade, Opt1GradePoi
 updateSubjectResults("Opt2", Opt2Credit, Opt2TH, Opt2IN, Opt2Grade, Opt2GradePoint, Opt2Remarks);
 
 
+updateSubjectResults("Occupation", OccupationCredit, OccupationTH, OccupationIN, OccupationGrade, OccupationGradePoint, OccupationRemarks);
+
+
+updateSubjectResults("Health", HealthCredit, HealthTH, HealthIN, HealthGrade, HealthGradePoint, HealthRemarks);
+
+
+
+updateMarks("GPA" ,GPA)
+
+updateMarks("Attendence" , Attendence)
 
 
 
@@ -564,10 +728,36 @@ updateSubjectResults("Opt2", Opt2Credit, Opt2TH, Opt2IN, Opt2Grade, Opt2GradePoi
   }) 
     
         
+const setupSearch = () => {
+    const searchInput = document.getElementById('search');
+    const contElements = document.querySelectorAll('.cont');
 
+    searchInput.addEventListener('input', function() {
+        const searchTerm = this.value.toLowerCase();
+
+        contElements.forEach(function(contElement) {
+            const name = contElement.querySelector('#name').textContent.toLowerCase();
+            const id = contElement.querySelector('#id').textContent.toLowerCase();
+            const grade = contElement.querySelector('#grade').textContent.toLowerCase();
+
+            if (name.includes(searchTerm) || id.includes(searchTerm) || grade.includes(searchTerm)) {
+                contElement.style.display = 'flex';
+            } else {
+                contElement.style.display = 'none';
+            }
+        });
+    });
+};
   setupSearch();
 };
-
+var BackBtn = document.querySelector("#BackBtn");
+var paymentPage= document.querySelector(".paymentPage");
+var page2= document.querySelector(".page2");
+BackBtn.addEventListener("click",function(){
+paymentPage.style.display="none";
+page2.style.transform="translate(100%,0%)";
+page2.style.display="none";
+})
 document.addEventListener("DOMContentLoaded", fetchData);
 
 

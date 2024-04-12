@@ -11,7 +11,7 @@
 />
 </head>
 <body>
- 
+
 <div class="addDiv">
  <h3>Your Data Has Been Added Successfully!</h3><br>
 <button id="addOk">Ok</button>
@@ -34,7 +34,7 @@
   
   <form>
   <i class="ri-user-line" id="inpIcon"></i>
-   <input type="name" id="Inpname" placeholder="Enter Student's Full Name" required><br>
+   <input type="name" id="Inpname" placeholder="Enter Student's Full Name"><br>
   <i class="ri-community-line" id="inpIcon"></i>
    <input type="text" id="Inpgrade" placeholder="Enter Student's Grade"><br>
    <i class="ri-list-ordered-2" id="inpIcon"></i>
@@ -42,9 +42,24 @@
    <input type="text" id="Inpsection" placeholder="Enter Student's Section"><br>
    <i class="ri-id-card-line" id="inpIcon"></i>
    <input type="number" id="InpstudentId" placeholder="Enter Student's Id No"><br>
-      
+
+<div class="paymentDiv">
+<h2>Payment:<select class="custom-select" id="payment" >
+  <option>Cleared</option>
+  <option>Not Cleared</option>
+</select></h2>
+</div>
+<div class="paymentDiv">
+<h2>Terminal:<select class="custom-select" id="terminal" >
+  <option>First Terminal</option>
+  <option>Second Terminal</option>
+  <option>Annual Examination</option>
+</select></h2>
+</div>
+<div class="margin"></div>      
   <h3>ENGLISH</h3>
-<p>Credit Hour:<select id="englishCreditHour">
+<select class="custom-select" id="englishCreditHour">
+  <option>-</option>
   <option>1</option>
   <option>2</option>
   <option>3</option>
@@ -53,9 +68,10 @@
   <option>6</option>
   <option>7</option>
   <option>8</option>
-</select></p>
+</select>
 
-<p>TH:<select id="englishTH">
+<select class="custom-select" id="englishTH">
+ <option>-</option>
   <option>A+</option>
   <option>A</option>
   <option>B+</option>
@@ -64,9 +80,10 @@
   <option>C</option>
   <option>D</option>
   <option>NG</option>
-</select></p>
+</select>
 
-<p>IN:<select id="englishIN">
+<select class="custom-select" id="englishIN">
+ <option>-</option>
   <option>A+</option>
   <option>A</option>
   <option>B+</option>
@@ -75,9 +92,10 @@
   <option>C</option>
   <option>D</option>
   <option>NG</option>
-</select></p>
+</select>
 
-<p>Grade:<select id="englishGrade">
+<select class="custom-select" id="englishGrade">
+ <option>-</option>
   <option>A+</option>
   <option>A</option>
   <option>B+</option>
@@ -86,10 +104,11 @@
   <option>C</option>
   <option>D</option>
   <option>NG</option>
-</select></p>
+</select>
 
 
-<p>Gtade Point:<select id="englishGradePoint">
+<select class="custom-select" id="englishGradePoint">
+ <option>-</option>
   <option>4.0</option>
   <option>3.6</option>
   <option>3.2</option>
@@ -98,9 +117,10 @@
   <option>2.0</option>
   <option>1.6</option>
   <option>0</option>
-</select></p>
+</select>
 
-<p>Remarks:<select id="englishRemarks">
+<select class="custom-select" id="englishRemarks">
+ <option>-</option>
   <option>Outstanding</option>
   <option>Excellent</option>
   <option>Very Good</option>
@@ -109,11 +129,12 @@
   <option>Acceptable</option>
   <option>Basic</option>
   <option>Not Graded</option>
-</select></p><br>
+</select><br>
 
 
 <h3>Nepali</h3>
-<p>Credit Hour:<select id="nepaliCreditHour">
+<select class="custom-select" id="nepaliCreditHour">
+ <option>-</option>
   <option>1</option>
   <option>2</option>
   <option>3</option>
@@ -122,9 +143,10 @@
   <option>6</option>
   <option>7</option>
   <option>8</option>
-</select></p>
+</select>
 
-<p>TH:<select id="nepaliTH">
+<select class="custom-select" id="nepaliTH">
+ <option>-</option>
   <option>A+</option>
   <option>A</option>
   <option>B+</option>
@@ -133,9 +155,10 @@
   <option>C</option>
   <option>D</option>
   <option>NG</option>
-</select></p>
+</select>
 
-<p>IN:<select id="nepaliIN">
+<select class="custom-select" id="nepaliIN">
+ <option>-</option>
   <option>A+</option>
   <option>A</option>
   <option>B+</option>
@@ -144,9 +167,10 @@
   <option>C</option>
   <option>D</option>
   <option>NG</option>
-</select></p>
+</select>
 
-<p>Grade:<select id="nepaliGrade">
+<select class="custom-select" id="nepaliGrade">
+ <option>-</option>
   <option>A+</option>
   <option>A</option>
   <option>B+</option>
@@ -155,9 +179,10 @@
   <option>C</option>
   <option>D</option>
   <option>NG</option>
-</select></p>
+</select>
 
-<p>Grade Point:<select id="nepaliGradePoint">
+<select class="custom-select" id="nepaliGradePoint">
+ <option>-</option>
   <option>4.0</option>
   <option>3.6</option>
   <option>3.2</option>
@@ -166,9 +191,10 @@
   <option>2.0</option>
   <option>1.6</option>
   <option>0</option>
-</select></p>
+</select>
 
-<p>Remarks:<select id="nepaliRemarks">
+<select class="custom-select" id="nepaliRemarks">
+ <option>-</option>
   <option>Outstanding</option>
   <option>Excellent</option>
   <option>Very Good</option>
@@ -177,7 +203,7 @@
   <option>Acceptable</option>
   <option>Basic</option>
   <option>Not Graded</option>
-</select></p><br>
+</select><br>
 
 
 
@@ -188,345 +214,530 @@
 
 
 <h3>MATHEMATICS</h3>
-<p>Credit Hour:<select id="mathCreditHour">
-  <option>1</option>
-  <option>2</option>
-  <option>3</option>
-  <option>4</option>
-  <option>5</option>
-  <option>6</option>
-  <option>7</option>
-  <option>8</option>
-</select></p>
+<select class="custom-select" id="mathCreditHour">
+    <option>-</option>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+</select>
 
-<p>TH:<select id="mathTH">
-  <option>A+</option>
-  <option>A</option>
-  <option>B+</option>
-  <option>B</option>
-  <option>C+</option>
-  <option>C</option>
-  <option>D</option>
-  <option>NG</option>
-</select></p>
+<select class="custom-select" id="mathTH">
+    <option>-</option>
+    <option>A+</option>
+    <option>A</option>
+    <option>B+</option>
+    <option>B</option>
+    <option>C+</option>
+    <option>C</option>
+    <option>D</option>
+    <option>NG</option>
+</select>
 
-<p>IN:<select id="mathIN">
-  <option>A+</option>
-  <option>A</option>
-  <option>B+</option>
-  <option>B</option>
-  <option>C+</option>
-  <option>C</option>
-  <option>D</option>
-  <option>NG</option>
-</select></p>
+<select class="custom-select" id="mathIN">
+    <option>-</option>
+    <option>A+</option>
+    <option>A</option>
+    <option>B+</option>
+    <option>B</option>
+    <option>C+</option>
+    <option>C</option>
+    <option>D</option>
+    <option>NG</option>
+</select>
 
-<p>Grade:<select id="mathGrade">
-  <option>A+</option>
-  <option>A</option>
-  <option>B+</option>
-  <option>B</option>
-  <option>C+</option>
-  <option>C</option>
-  <option>D</option>
-  <option>NG</option>
-</select></p>
+<select class="custom-select" id="mathGrade">
+    <option>-</option>
+    <option>A+</option>
+    <option>A</option>
+    <option>B+</option>
+    <option>B</option>
+    <option>C+</option>
+    <option>C</option>
+    <option>D</option>
+    <option>NG</option>
+</select>
 
-<p>Grade Point:<select id="mathGradePoint">
-  <option>4.0</option>
-  <option>3.6</option>
-  <option>3.2</option>
-  <option>2.8</option>
-  <option>2.4</option>
-  <option>2.0</option>
-  <option>1.6</option>
-  <option>0</option>
-</select></p>
+<select class="custom-select" id="mathGradePoint">
+    <option>-</option>
+    <option>4.0</option>
+    <option>3.6</option>
+    <option>3.2</option>
+    <option>2.8</option>
+    <option>2.4</option>
+    <option>2.0</option>
+    <option>1.6</option>
+    <option>0</option>
+</select>
 
-<p>Remarks:<select id="mathRemarks">
-  <option>Outstanding</option>
-  <option>Excellent</option>
-  <option>Very Good</option>
-  <option>Good</option>
-  <option>Satisfactory</option>
-  <option>Acceptable</option>
-  <option>Basic</option>
-  <option>Not Graded</option>
-</select></p><br>
+<select class="custom-select" id="mathRemarks">
+    <option>-</option>
+    <option>Outstanding</option>
+    <option>Excellent</option>
+    <option>Very Good</option>
+    <option>Good</option>
+    <option>Satisfactory</option>
+    <option>Acceptable</option>
+    <option>Basic</option>
+    <option>Not Graded</option>
+</select>
 
 <h3>SCIENCE & TECHNOLOGY</h3>
-<p>Credit Hour:<select id="scienceCreditHour">
-  <option>1</option>
-  <option>2</option>
-  <option>3</option>
-  <option>4</option>
-  <option>5</option>
-  <option>6</option>
-  <option>7</option>
-  <option>8</option>
-</select></p>
+<select class="custom-select" id="scienceCreditHour">
+    <option>-</option>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+</select>
 
-<p>TH:<select id="scienceTH">
-  <option>A+</option>
-  <option>A</option>
-  <option>B+</option>
-  <option>B</option>
-  <option>C+</option>
-  <option>C</option>
-  <option>D</option>
-  <option>NG</option>
-</select></p>
+<select class="custom-select" id="scienceTH">
+    <option>-</option>
+    <option>A+</option>
+    <option>A</option>
+    <option>B+</option>
+    <option>B</option>
+    <option>C+</option>
+    <option>C</option>
+    <option>D</option>
+    <option>NG</option>
+</select>
 
-<p>IN:<select id="scienceIN">
-  <option>A+</option>
-  <option>A</option>
-  <option>B+</option>
-  <option>B</option>
-  <option>C+</option>
-  <option>C</option>
-  <option>D</option>
-  <option>NG</option>
-</select></p>
+<select class="custom-select" id="scienceIN">
+    <option>-</option>
+    <option>A+</option>
+    <option>A</option>
+    <option>B+</option>
+    <option>B</option>
+    <option>C+</option>
+    <option>C</option>
+    <option>D</option>
+    <option>NG</option>
+</select>
 
-<p>Grade:<select id="scienceGrade">
-  <option>A+</option>
-  <option>A</option>
-  <option>B+</option>
-  <option>B</option>
-  <option>C+</option>
-  <option>C</option>
-  <option>D</option>
-  <option>NG</option>
-</select></p>
+<select class="custom-select" id="scienceGrade">
+    <option>-</option>
+    <option>A+</option>
+    <option>A</option>
+    <option>B+</option>
+    <option>B</option>
+    <option>C+</option>
+    <option>C</option>
+    <option>D</option>
+    <option>NG</option>
+</select>
 
-<p>Grade Point:<select id="scienceGradePoint">
-  <option>4.0</option>
-  <option>3.6</option>
-  <option>3.2</option>
-  <option>2.8</option>
-  <option>2.4</option>
-  <option>2.0</option>
-  <option>1.6</option>
-  <option>0</option>
-</select></p>
+<select class="custom-select" id="scienceGradePoint">
+    <option>-</option>
+    <option>4.0</option>
+    <option>3.6</option>
+    <option>3.2</option>
+    <option>2.8</option>
+    <option>2.4</option>
+    <option>2.0</option>
+    <option>1.6</option>
+    <option>0</option>
+</select>
 
-<p>Remarks:<select id="scienceRemarks">
-  <option>Outstanding</option>
-  <option>Excellent</option>
-  <option>Very Good</option>
-  <option>Good</option>
-  <option>Satisfactory</option>
-  <option>Acceptable</option>
-  <option>Basic</option>
-  <option>Not Graded</option>
-</select></p><br>
+<select class="custom-select" id="scienceRemarks">
+    <option>-</option>
+    <option>Outstanding</option>
+    <option>Excellent</option>
+    <option>Very Good</option>
+    <option>Good</option>
+    <option>Satisfactory</option>
+    <option>Acceptable</option>
+    <option>Basic</option>
+    <option>Not Graded</option>
+</select>
 
 <h3>SOCIAL STUDIES</h3>
-<p>Credit Hour:<select id="socialCreditHour">
-  <option>1</option>
-  <option>2</option>
-  <option>3</option>
-  <option>4</option>
-  <option>5</option>
-  <option>6</option>
-  <option>7</option>
-  <option>8</option>
-</select></p>
+<select class="custom-select" id="socialCreditHour">
+    <option>-</option>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+</select>
 
-<p>TH:<select id="socialTH">
-  <option>A+</option>
-  <option>A</option>
-  <option>B+</option>
-  <option>B</option>
-  <option>C+</option>
-  <option>C</option>
-  <option>D</option>
-  <option>NG</option>
-</select></p>
+<select class="custom-select" id="socialTH">
+    <option>-</option>
+    <option>A+</option>
+    <option>A</option>
+    <option>B+</option>
+    <option>B</option>
+    <option>C+</option>
+    <option>C</option>
+    <option>D</option>
+    <option>NG</option>
+</select>
 
-<p>IN:<select id="socialIN">
-  <option>A+</option>
-  <option>A</option>
-  <option>B+</option>
-  <option>B</option>
-  <option>C+</option>
-  <option>C</option>
-  <option>D</option>
-  <option>NG</option>
-</select></p>
+<select class="custom-select" id="socialIN">
+    <option>-</option>
+    <option>A+</option>
+    <option>A</option>
+    <option>B+</option>
+    <option>B</option>
+    <option>C+</option>
+    <option>C</option>
+    <option>D</option>
+    <option>NG</option>
+</select>
 
-<p>Grade:<select id="socialGrade">
-  <option>A+</option>
-  <option>A</option>
-  <option>B+</option>
-  <option>B</option>
-  <option>C+</option>
-  <option>C</option>
-  <option>D</option>
-  <option>NG</option>
-</select></p>
+<select class="custom-select" id="socialGrade">
+    <option>-</option>
+    <option>A+</option>
+    <option>A</option>
+    <option>B+</option>
+    <option>B</option>
+    <option>C+</option>
+    <option>C</option>
+    <option>D</option>
+    <option>NG</option>
+</select>
 
-<p>Grade Point:<select id="socialGradePoint">
-  <option>4.0</option>
-  <option>3.6</option>
-  <option>3.2</option>
-  <option>2.8</option>
-  <option>2.4</option>
-  <option>2.0</option>
-  <option>1.6</option>
-  <option>0</option>
-</select></p>
+<select class="custom-select" id="socialGradePoint">
+    <option>-</option>
+    <option>4.0</option>
+    <option>3.6</option>
+    <option>3.2</option>
+    <option>2.8</option>
+    <option>2.4</option>
+    <option>2.0</option>
+    <option>1.6</option>
+    <option>0</option>
+</select>
 
-<p>Remarks:<select id="socialRemarks">
-  <option>Outstanding</option>
-  <option>Excellent</option>
-  <option>Very Good</option>
-  <option>Good</option>
-  <option>Satisfactory</option>
-  <option>Acceptable</option>
-  <option>Basic</option>
-  <option>Not Graded</option>
-</select></p><br>
+<select class="custom-select" id="socialRemarks">
+    <option>-</option>
+    <option>Outstanding</option>
+    <option>Excellent</option>
+    <option>Very Good</option>
+    <option>Good</option>
+    <option>Satisfactory</option>
+    <option>Acceptable</option>
+    <option>Basic</option>
+    <option>Not Graded</option>
+</select>
 
-<h3>Optional Subject 1</h3>
-<p>Credit Hour:<select id="opt1CreditHour">
-  <option>1</option>
-  <option>2</option>
-  <option>3</option>
-  <option>4</option>
-  <option>5</option>
-  <option>6</option>
-  <option>7</option>
-  <option>8</option>
-</select></p>
+<h3>Optional Mathematics</h3>
+<select class="custom-select" id="opt1CreditHour">
+    <option>-</option>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+</select>
 
-<p>TH:<select id="opt1TH">
-  <option>A+</option>
-  <option>A</option>
-  <option>B+</option>
-  <option>B</option>
-  <option>C+</option>
-  <option>C</option>
-  <option>D</option>
-  <option>NG</option>
-</select></p>
+<select class="custom-select" id="opt1TH">
+    <option>-</option>
+    <option>A+</option>
+    <option>A</option>
+    <option>B+</option>
+    <option>B</option>
+    <option>C+</option>
+    <option>C</option>
+    <option>D</option>
+    <option>NG</option>
+</select>
 
-<p>IN:<select id="opt1IN">
-  <option>A+</option>
-  <option>A</option>
-  <option>B+</option>
-  <option>B</option>
-  <option>C+</option>
-  <option>C</option>
-  <option>D</option>
-  <option>NG</option>
-</select></p>
+<select class="custom-select" id="opt1IN">
+    <option>-</option>
+    <option>A+</option>
+    <option>A</option>
+    <option>B+</option>
+    <option>B</option>
+    <option>C+</option>
+    <option>C</option>
+    <option>D</option>
+    <option>NG</option>
+</select>
 
-<p>Grade:<select id="opt1Grade">
-  <option>A+</option>
-  <option>A</option>
-  <option>B+</option>
-  <option>B</option>
-  <option>C+</option>
-  <option>C</option>
-  <option>D</option>
-  <option>NG</option>
-</select></p>
+<select class="custom-select" id="opt1Grade">
+    <option>-</option>
+    <option>A+</option>
+    <option>A</option>
+    <option>B+</option>
+    <option>B</option>
+    <option>C+</option>
+    <option>C</option>
+    <option>D</option>
+    <option>NG</option>
+</select>
 
-<p>Grade Point:<select id="opt1GradePoint">
-  <option>4.0</option>
-  <option>3.6</option>
-  <option>3.2</option>
-  <option>2.8</option>
-  <option>2.4</option>
-  <option>2.0</option>
-  <option>1.6</option>
-  <option>0</option>
-</select></p>
+<select class="custom-select" id="opt1GradePoint">
+    <option>-</option>
+    <option>4.0</option>
+    <option>3.6</option>
+    <option>3.2</option>
+    <option>2.8</option>
+    <option>2.4</option>
+    <option>2.0</option>
+    <option>1.6</option>
+    <option>0</option>
+</select>
 
-<p>Remarks:<select id="opt1Remarks">
-  <option>Outstanding</option>
-  <option>Excellent</option>
-  <option>Very Good</option>
-  <option>Good</option>
-  <option>Satisfactory</option>
-  <option>Acceptable</option>
-  <option>Basic</option>
-  <option>Not Graded</option>
-</select></p><br>
+<select class="custom-select" id="opt1Remarks">
+    <option>-</option>
+    <option>Outstanding</option>
+    <option>Excellent</option>
+    <option>Very Good</option>
+    <option>Good</option>
+    <option>Satisfactory</option>
+    <option>Acceptable</option>
+    <option>Basic</option>
+    <option>Not Graded</option>
+</select>
 
-<h3>Optional Subject 2</h3>
-<p>Credit Hour:<select id="opt2CreditHour">
-  <option>1</option>
-  <option>2</option>
-  <option>3</option>
-  <option>4</option>
-  <option>5</option>
-  <option>6</option>
-  <option>7</option>
-  <option>8</option>
-</select></p>
+<h3>COMPUTER</h3>
+<select class="custom-select" id="opt2CreditHour">
+    <option>-</option>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+</select>
 
-<p>TH:<select id="opt2TH">
-  <option>A+</option>
-  <option>A</option>
-  <option>B+</option>
-  <option>B</option>
-  <option>C+</option>
-  <option>C</option>
-  <option>D</option>
-  <option>NG</option>
-</select></p>
+<select class="custom-select" id="opt2TH">
+    <option>-</option>
+    <option>A+</option>
+    <option>A</option>
+    <option>B+</option>
+    <option>B</option>
+    <option>C+</option>
+    <option>C</option>
+    <option>D</option>
+    <option>NG</option>
+</select>
 
-<p>IN:<select id="opt2IN">
-  <option>A+</option>
-  <option>A</option>
-  <option>B+</option>
-  <option>B</option>
-  <option>C+</option>
-  <option>C</option>
-  <option>D</option>
-  <option>NG</option>
-</select></p>
+<select class="custom-select" id="opt2IN">
+    <option>-</option>
+    <option>A+</option>
+    <option>A</option>
+    <option>B+</option>
+    <option>B</option>
+    <option>C+</option>
+    <option>C</option>
+    <option>D</option>
+    <option>NG</option>
+</select>
 
-<p>Grade:<select id="opt2Grade">
-  <option>A+</option>
-  <option>A</option>
-  <option>B+</option>
-  <option>B</option>
-  <option>C+</option>
-  <option>C</option>
-  <option>D</option>
-  <option>NG</option>
-</select></p>
+<select class="custom-select" id="opt2Grade">
+    <option>-</option>
+    <option>A+</option>
+    <option>A</option>
+    <option>B+</option>
+    <option>B</option>
+    <option>C+</option>
+    <option>C</option>
+    <option>D</option>
+    <option>NG</option>
+</select>
 
-<p>Grade Point:<select id="opt2GradePoint">
-  <option>4.0</option>
-  <option>3.6</option>
-  <option>3.2</option>
-  <option>2.8</option>
-  <option>2.4</option>
-  <option>2.0</option>
-  <option>1.6</option>
-  <option>0</option>
-</select></p>
+<select class="custom-select" id="opt2GradePoint">
+    <option>-</option>
+    <option>4.0</option>
+    <option>3.6</option>
+    <option>3.2</option>
+    <option>2.8</option>
+    <option>2.4</option>
+    <option>2.0</option>
+    <option>1.6</option>
+    <option>0</option>
+</select>
 
-<p>Remarks:<select id="opt2Remarks">
-  <option>Outstanding</option>
-  <option>Excellent</option>
-  <option>Very Good</option>
-  <option>Good</option>
-  <option>Satisfactory</option>
-  <option>Acceptable</option>
-  <option>Basic</option>
-  <option>Not Graded</option>
-</select></p><br>
+<select class="custom-select" id="opt2Remarks">
+    <option>-</option>
+    <option>Outstanding</option>
+    <option>Excellent</option>
+    <option>Very Good</option>
+    <option>Good</option>
+    <option>Satisfactory</option>
+    <option>Acceptable</option>
+    <option>Basic</option>
+    <option>Not Graded</option>
+</select>
 
-   
+<h3>OCCUPATION</h3>
+<select class="custom-select" id="occupationCreditHour">
+    <option>-</option>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+</select>
+
+<select class="custom-select" id="occupationTH">
+    <option>-</option>
+    <option>A+</option>
+    <option>A</option>
+    <option>B+</option>
+    <option>B</option>
+    <option>C+</option>
+    <option>C</option>
+    <option>D</option>
+    <option>NG</option>
+</select>
+
+<select class="custom-select" id="occupationIN">
+    <option>-</option>
+    <option>A+</option>
+    <option>A</option>
+    <option>B+</option>
+    <option>B</option>
+    <option>C+</option>
+    <option>C</option>
+    <option>D</option>
+    <option>NG</option>
+</select>
+
+<select class="custom-select" id="occupationGrade">
+    <option>-</option>
+    <option>A+</option>
+    <option>A</option>
+    <option>B+</option>
+    <option>B</option>
+    <option>C+</option>
+    <option>C</option>
+    <option>D</option>
+    <option>NG</option>
+</select>
+
+<select class="custom-select" id="occupationGradePoint">
+    <option>-</option>
+    <option>4.0</option>
+    <option>3.6</option>
+    <option>3.2</option>
+    <option>2.8</option>
+    <option>2.4</option>
+    <option>2.0</option>
+    <option>1.6</option>
+    <option>0</option>
+</select>
+
+<select class="custom-select" id="occupationRemarks">
+    <option>-</option>
+    <option>Outstanding</option>
+    <option>Excellent</option>
+    <option>Very Good</option>
+    <option>Good</option>
+    <option>Satisfactory</option>
+    <option>Acceptable</option>
+    <option>Basic</option>
+    <option>Not Graded</option>
+</select>
+
+<h3>HEALTH</h3>
+<select class="custom-select" id="healthCreditHour">
+    <option>-</option>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+</select>
+
+<select class="custom-select" id="healthTH">
+    <option>-</option>
+    <option>A+</option>
+    <option>A</option>
+    <option>B+</option>
+    <option>B</option>
+    <option>C+</option>
+    <option>C</option>
+    <option>D</option>
+    <option>NG</option>
+</select>
+
+<select class="custom-select" id="healthIN">
+    <option>-</option>
+    <option>A+</option>
+    <option>A</option>
+    <option>B+</option>
+    <option>B</option>
+    <option>C+</option>
+    <option>C</option>
+    <option>D</option>
+    <option>NG</option>
+</select>
+
+<select class="custom-select" id="healthGrade">
+    <option>-</option>
+    <option>A+</option>
+    <option>A</option>
+    <option>B+</option>
+    <option>B</option>
+    <option>C+</option>
+    <option>C</option>
+    <option>D</option>
+    <option>NG</option>
+</select>
+
+<select class="custom-select" id="healthGradePoint">
+    <option>-</option>
+    <option>4.0</option>
+    <option>3.6</option>
+    <option>3.2</option>
+    <option>2.8</option>
+    <option>2.4</option>
+    <option>2.0</option>
+    <option>1.6</option>
+    <option>0</option>
+</select>
+
+<select class="custom-select" id="healthRemarks">
+    <option>-</option>
+    <option>Outstanding</option>
+    <option>Excellent</option>
+    <option>Very Good</option>
+    <option>Good</option>
+    <option>Satisfactory</option>
+    <option>Acceptable</option>
+    <option>Basic</option>
+    <option>Not Graded</option>
+</select>
+
+<center>
+<h3>GPA:</h3><input type="number" id="InpGPA" placeholder="Enter Student's GPA"><br>
+<h3>ATTENDENCE:</h3><input type="number" id="InpAttendence" placeholder="Enter Student's Attendence"></center><br> 
+  
    <button type="submit" value="Add" id="submit">Add <i class="ri-add-large-line"></i></button>
   </form>
  </div> 
 </main>
+
+
+<hr>
+
+
+
 
 <main id="main">
  <nav>
@@ -584,6 +795,9 @@ const fetchData = async () => {
      
     <div class="mainCont">
     <div class="cont">
+     <div class="terminalDis">
+   <p id="terminal">${doc.data().TERMINAL}</p> 
+  </div>
       <h3 id="name">${doc.data().Name}</h3>
       <h3 id="grade">${doc.data().Grade}</h3>
       <h3 id="rollNo">${doc.data().RollNo}</h3>
@@ -605,9 +819,25 @@ const fetchData = async () => {
     <input type="number" id="editRollno${docId}" placeholder="Enter Student's Roll No"><br>
     <input type="text" id="editSection${docId}" placeholder="Enter Student's Section"><br>
     <input type="number" id="editStudentId${docId}" placeholder="Enter Student's Id No"><br><br>
+<div class="paymentDiv">
+<p>Payment:<select class="custom-select" id="paymentEdit${docId}">
+  <option id="paymentOption${docId}"></option>
+  <option>Cleared</option>
+  <option>Not Cleared</option>
+</select></p>
+</div>
+<div class="paymentDiv">
+<h2>Terminal:<select class="custom-select" id="terminalEdit${docId}" >
+<option id="terminalOption${docId}"></option>
+ <option>-</option>
+  <option>First Terminal</option>
+  <option>Second Terminal</option>
+  <option>Annual Examination</option>
+</select></h2>
+</div>
 <h3>ENGLISH</h3>
 
-<select id="englishCreditHour${docId}">
+<select class="custom-select" id="englishCreditHour${docId}">
   <option id="englishCreditOption${docId}"></option>
   <option>1</option>
   <option>2</option>
@@ -619,7 +849,7 @@ const fetchData = async () => {
   <option>8</option>
 </select>
 
-<select id="englishTH${docId}">
+<select class="custom-select" id="englishTH${docId}">
   <option id="englishTHOption${docId}"></option>
   <option>A+</option>
   <option>A</option>
@@ -631,7 +861,7 @@ const fetchData = async () => {
   <option>NG</option>
 </select>
 
-<select id="englishIN${docId}">
+<select class="custom-select" id="englishIN${docId}">
   <option id="englishINOption${docId}"></option>
   <option>A+</option>
   <option>A</option>
@@ -643,7 +873,7 @@ const fetchData = async () => {
   <option>NG</option>
 </select>
 
-<select id="englishGrade${docId}">
+<select class="custom-select" id="englishGrade${docId}">
   <option id="englishGradeOption${docId}"></option>
   <option>A+</option>
   <option>A</option>
@@ -657,7 +887,7 @@ const fetchData = async () => {
 
 
 
-<select id="englishGradePoint${docId}">
+<select class="custom-select" id="englishGradePoint${docId}">
   <option id="englishGradePointOption${docId}"></option>
   <option>4.0</option>
   <option>3.6</option>
@@ -669,7 +899,7 @@ const fetchData = async () => {
   <option>0</option>
 </select>
 
-<select id="englishRemarks${docId}">
+<select class="custom-select" id="englishRemarks${docId}">
   <option id="englishRemarksOption${docId}"></option>
   <option>Outstanding</option>
   <option>Excellent</option>
@@ -681,7 +911,7 @@ const fetchData = async () => {
   <option>Not Graded</option>
 </select>
 <h3>NEPALI</h3>
-<select id="nepaliCreditHour${docId}">
+<select class="custom-select" id="nepaliCreditHour${docId}">
   <option id="nepaliCreditOption${docId}"></option>
   <option>1</option>
   <option>2</option>
@@ -693,7 +923,7 @@ const fetchData = async () => {
   <option>8</option>
 </select>
 
-<select id="nepaliTH${docId}">
+<select class="custom-select" id="nepaliTH${docId}">
   <option id="nepaliTHOption${docId}"></option>
   <option>A+</option>
   <option>A</option>
@@ -705,7 +935,7 @@ const fetchData = async () => {
   <option>NG</option>
 </select>
 
-<select id="nepaliIN${docId}">
+<select class="custom-select" id="nepaliIN${docId}">
   <option id="nepaliINOption${docId}"></option>
   <option>A+</option>
   <option>A</option>
@@ -717,7 +947,7 @@ const fetchData = async () => {
   <option>NG</option>
 </select>
 
-<select id="nepaliGrade${docId}">
+<select class="custom-select" id="nepaliGrade${docId}">
   <option id="nepaliGradeOption${docId}"></option>
   <option>A+</option>
   <option>A</option>
@@ -729,7 +959,7 @@ const fetchData = async () => {
   <option>NG</option>
 </select>
 
-<select id="nepaliGradePoint${docId}">
+<select class="custom-select" id="nepaliGradePoint${docId}">
   <option id="nepaliGradePointOption${docId}"></option>
   <option>4.0</option>
   <option>3.6</option>
@@ -741,7 +971,7 @@ const fetchData = async () => {
   <option>0</option>
 </select>
 
-<select id="nepaliRemarks${docId}">
+<select class="custom-select" id="nepaliRemarks${docId}">
   <option id="nepaliRemarksOption${docId}"></option>
   <option>Outstanding</option>
   <option>Excellent</option>
@@ -753,7 +983,7 @@ const fetchData = async () => {
   <option>Not Graded</option>
 </select>
 <h3>MATHEMATICS</h3>
-<select id="mathCreditHour${docId}">
+<select class="custom-select" id="mathCreditHour${docId}">
  <option id="mathCreditOption${docId}"></option>
   <option>1</option>
   <option>2</option>
@@ -765,7 +995,7 @@ const fetchData = async () => {
   <option>8</option>
 </select>
 
-<select id="mathTH${docId}">
+<select class="custom-select" id="mathTH${docId}">
   <option id="mathTHOption${docId}"></option>
   <option>A+</option>
   <option>A</option>
@@ -777,7 +1007,7 @@ const fetchData = async () => {
   <option>NG</option>
 </select>
 
-<select id="mathIN${docId}">
+<select class="custom-select" id="mathIN${docId}">
   <option id="mathINOption${docId}"></option>
   <option>A+</option>
   <option>A</option>
@@ -789,7 +1019,7 @@ const fetchData = async () => {
   <option>NG</option>
 </select>
 
-<select id="mathGrade${docId}">
+<select class="custom-select" id="mathGrade${docId}">
   <option id="mathGradeOption${docId}"></option>
   <option>A+</option>
   <option>A</option>
@@ -801,7 +1031,7 @@ const fetchData = async () => {
   <option>NG</option>
 </select>
 
-<select id="mathGradePoint${docId}">
+<select class="custom-select" id="mathGradePoint${docId}">
   <option id="mathGradePointOption${docId}"></option>
   <option>4.0</option>
   <option>3.6</option>
@@ -813,7 +1043,7 @@ const fetchData = async () => {
   <option>0</option>
 </select>
 
-<select id="mathRemarks${docId}">
+<select class="custom-select" id="mathRemarks${docId}">
   <option id="mathRemarksOption${docId}"></option>
   <option>Outstanding</option>
   <option>Excellent</option>
@@ -825,7 +1055,7 @@ const fetchData = async () => {
   <option>Not Graded</option>
 </select>
 <h3>SCIENCE & TECHNOLOGY</h3>
-<select id="scienceCreditHour${docId}">
+<select class="custom-select" id="scienceCreditHour${docId}">
   <option id="scienceCreditOption${docId}"></option>
   <option>1</option>
   <option>2</option>
@@ -837,7 +1067,7 @@ const fetchData = async () => {
   <option>8</option>
 </select>
 
-<select id="scienceTH${docId}">
+<select class="custom-select" id="scienceTH${docId}">
   <option id="scienceTHOption${docId}"></option>
   <option>A+</option>
   <option>A</option>
@@ -849,7 +1079,7 @@ const fetchData = async () => {
   <option>NG</option>
 </select>
 
-<select id="scienceIN${docId}">
+<select class="custom-select" id="scienceIN${docId}">
   <option id="scienceINOption${docId}"></option>
   <option>A+</option>
   <option>A</option>
@@ -861,7 +1091,7 @@ const fetchData = async () => {
   <option>NG</option>
 </select>
 
-<select id="scienceGrade${docId}">
+<select class="custom-select" id="scienceGrade${docId}">
   <option id="scienceGradeOption${docId}"></option>
   <option>A+</option>
   <option>A</option>
@@ -873,7 +1103,7 @@ const fetchData = async () => {
   <option>NG</option>
 </select>
 
-<select id="scienceGradePoint${docId}">
+<select class="custom-select" id="scienceGradePoint${docId}">
   <option id="scienceGradePointOption${docId}"></option>
   <option>4.0</option>
   <option>3.6</option>
@@ -885,7 +1115,7 @@ const fetchData = async () => {
   <option>0</option>
 </select>
 
-<select id="scienceRemarks${docId}">
+<select class="custom-select" id="scienceRemarks${docId}">
   <option id="scienceRemarksOption${docId}"></option>
   <option>Outstanding</option>
   <option>Excellent</option>
@@ -898,7 +1128,7 @@ const fetchData = async () => {
 </select>
 
 <h3>SOCIAL STUDIES</h3>
-<select id="socialCreditHour${docId}">
+<select class="custom-select" id="socialCreditHour${docId}">
   <option id="socialCreditOption${docId}"></option>
   <option>1</option>
   <option>2</option>
@@ -910,7 +1140,7 @@ const fetchData = async () => {
   <option>8</option>
 </select>
 
-<select id="socialTH${docId}">
+<select class="custom-select" id="socialTH${docId}">
  <option id="socialTHOption${docId}"></option>
   <option>A+</option>
   <option>A</option>
@@ -922,7 +1152,7 @@ const fetchData = async () => {
   <option>NG</option>
 </select>
 
-<select id="socialIN${docId}">
+<select class="custom-select" id="socialIN${docId}">
   <option id="socialINOption${docId}"></option>
   <option>A+</option>
   <option>A</option>
@@ -934,7 +1164,7 @@ const fetchData = async () => {
   <option>NG</option>
 </select>
 
-<select id="socialGrade${docId}">
+<select class="custom-select" id="socialGrade${docId}">
   <option id="socialGradeOption${docId}"></option>
   <option>A+</option>
   <option>A</option>
@@ -946,7 +1176,7 @@ const fetchData = async () => {
   <option>NG</option>
 </select>
 
-<select id="socialGradePoint${docId}">
+<select class="custom-select" id="socialGradePoint${docId}">
   <option id="socialGradePointOption${docId}"></option>
   <option>4.0</option>
   <option>3.6</option>
@@ -958,7 +1188,7 @@ const fetchData = async () => {
   <option>0</option>
 </select>
 
-<select id="socialRemarks${docId}">
+<select class="custom-select" id="socialRemarks${docId}">
   <option id="socialRemarksOption${docId}"></option>
   <option>Outstanding</option>
   <option>Excellent</option>
@@ -972,7 +1202,7 @@ const fetchData = async () => {
 
 <h3>OPT-I MATHEMATICS</h3>
 
-<select id="opt1CreditHour${docId}">
+<select class="custom-select" id="opt1CreditHour${docId}">
   <option id="opt1CreditOption${docId}"></option>
   <option>1</option>
   <option>2</option>
@@ -987,7 +1217,7 @@ const fetchData = async () => {
 
 
 
-<select id="opt1TH${docId}">
+<select class="custom-select" id="opt1TH${docId}">
   <option id="opt1THOption${docId}"></option>
   <option>A+</option>
   <option>A</option>
@@ -999,7 +1229,7 @@ const fetchData = async () => {
   <option>NG</option>
 </select>
 
-<select id="opt1IN${docId}">
+<select class="custom-select" id="opt1IN${docId}">
   <option id="opt1INOption${docId}"></option>
   <option>A+</option>
   <option>A</option>
@@ -1011,7 +1241,7 @@ const fetchData = async () => {
   <option>NG</option>
 </select>
 
-<select id="opt1Grade${docId}">
+<select class="custom-select" id="opt1Grade${docId}">
   <option id="opt1GradeOption${docId}"></option>
   <option>A+</option>
   <option>A</option>
@@ -1023,7 +1253,7 @@ const fetchData = async () => {
   <option>NG</option>
 </select>
 
-<select id="opt1GradePoint${docId}">
+<select class="custom-select" id="opt1GradePoint${docId}">
   <option id="opt1GradePointOption${docId}"></option>
   <option>4.0</option>
   <option>3.6</option>
@@ -1035,7 +1265,7 @@ const fetchData = async () => {
   <option>0</option>
 </select>
 
-<select id="opt1Remarks${docId}">
+<select class="custom-select" id="opt1Remarks${docId}">
   <option id="opt1RemarksOption${docId}"></option>
   <option>Outstanding</option>
   <option>Excellent</option>
@@ -1048,7 +1278,7 @@ const fetchData = async () => {
 </select>
 
 <h3>OPT-II</h3>
-<select id="opt2CreditHour${docId}">
+<select class="custom-select" id="opt2CreditHour${docId}">
   <option id="opt2CreditOption${docId}"></option>
   <option>1</option>
   <option>2</option>
@@ -1061,7 +1291,7 @@ const fetchData = async () => {
 </select>
 
 
-<select id="opt2TH${docId}">
+<select class="custom-select" id="opt2TH${docId}">
   <option id="opt2THOption${docId}"></option>
   <option>A+</option>
   <option>A</option>
@@ -1073,7 +1303,7 @@ const fetchData = async () => {
   <option>NG</option>
 </select>
 
-<select id="opt2IN${docId}">
+<select class="custom-select" id="opt2IN${docId}">
   <option id="opt2INOption${docId}"></option>
   <option>A+</option>
   <option>A</option>
@@ -1085,7 +1315,7 @@ const fetchData = async () => {
   <option>NG</option>
 </select>
 
-<select id="opt2Grade${docId}">
+<select class="custom-select" id="opt2Grade${docId}">
   <option id="opt2GradeOption${docId}"></option>
   <option>A+</option>
   <option>A</option>
@@ -1097,7 +1327,7 @@ const fetchData = async () => {
   <option>NG</option>
 </select>
 
-<select id="opt2GradePoint${docId}">
+<select class="custom-select" id="opt2GradePoint${docId}">
   <option id="opt2GradePointOption${docId}"></option>
   <option>4.0</option>
   <option>3.6</option>
@@ -1109,7 +1339,7 @@ const fetchData = async () => {
   <option>0</option>
 </select>
 
-<select id="opt2Remarks${docId}">
+<select class="custom-select" id="opt2Remarks${docId}">
   <option id="opt2RemarksOption${docId}"></option>
   <option>Outstanding</option>
   <option>Excellent</option>
@@ -1119,10 +1349,158 @@ const fetchData = async () => {
   <option>Acceptable</option>
   <option>Basic</option>
   <option>Not Graded</option>
-</select><br><br>
+</select>
+<h3>OCCUPATION</h3>
+<select class="custom-select" id="occupationCreditHour${docId}">
+  <option id="occupationCreditOption${docId}"></option>
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+  <option>6</option>
+  <option>7</option>
+  <option>8</option>
+</select>
 
 
+<select class="custom-select" id="occupationTH${docId}">
+  <option id="occupationTHOption${docId}"></option>
+  <option>A+</option>
+  <option>A</option>
+  <option>B+</option>
+  <option>B</option>
+  <option>C+</option>
+  <option>C</option>
+  <option>D</option>
+  <option>NG</option>
+</select>
 
+<select class="custom-select" id="occupationIN${docId}">
+  <option id="occupationINOption${docId}"></option>
+  <option>A+</option>
+  <option>A</option>
+  <option>B+</option>
+  <option>B</option>
+  <option>C+</option>
+  <option>C</option>
+  <option>D</option>
+  <option>NG</option>
+</select>
+
+<select class="custom-select" id="occupationGrade${docId}">
+  <option id="occupationGradeOption${docId}"></option>
+  <option>A+</option>
+  <option>A</option>
+  <option>B+</option>
+  <option>B</option>
+  <option>C+</option>
+  <option>C</option>
+  <option>D</option>
+  <option>NG</option>
+</select>
+
+<select class="custom-select" id="occupationGradePoint${docId}">
+  <option id="occupationGradePointOption${docId}"></option>
+  <option>4.0</option>
+  <option>3.6</option>
+  <option>3.2</option>
+  <option>2.8</option>
+  <option>2.4</option>
+  <option>2.0</option>
+  <option>1.6</option>
+  <option>0</option>
+</select>
+
+<select class="custom-select" id="occupationRemarks${docId}">
+  <option id="occupationRemarksOption${docId}"></option>
+  <option>Outstanding</option>
+  <option>Excellent</option>
+  <option>Very Good</option>
+  <option>Good</option>
+  <option>Satisfactory</option>
+  <option>Acceptable</option>
+  <option>Basic</option>
+  <option>Not Graded</option>
+</select>
+
+<h3>HEALTH</h3>
+<select class="custom-select" id="healthCreditHour${docId}">
+  <option id="healthCreditOption${docId}"></option>
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+  <option>6</option>
+  <option>7</option>
+  <option>8</option>
+</select>
+
+
+<select class="custom-select" id="healthTH${docId}">
+  <option id="healthTHOption${docId}"></option>
+  <option>A+</option>
+  <option>A</option>
+  <option>B+</option>
+  <option>B</option>
+  <option>C+</option>
+  <option>C</option>
+  <option>D</option>
+  <option>NG</option>
+</select>
+
+<select class="custom-select" id="healthIN${docId}">
+  <option id="healthINOption${docId}"></option>
+  <option>A+</option>
+  <option>A</option>
+  <option>B+</option>
+  <option>B</option>
+  <option>C+</option>
+  <option>C</option>
+  <option>D</option>
+  <option>NG</option>
+</select>
+
+<select class="custom-select" id="healthGrade${docId}">
+  <option id="healthGradeOption${docId}"></option>
+  <option>A+</option>
+  <option>A</option>
+  <option>B+</option>
+  <option>B</option>
+  <option>C+</option>
+  <option>C</option>
+  <option>D</option>
+  <option>NG</option>
+</select>
+
+<select class="custom-select" id="healthGradePoint${docId}">
+  <option id="healthGradePointOption${docId}"></option>
+  <option>4.0</option>
+  <option>3.6</option>
+  <option>3.2</option>
+  <option>2.8</option>
+  <option>2.4</option>
+  <option>2.0</option>
+  <option>1.6</option>
+  <option>0</option>
+</select>
+
+<select class="custom-select" id="healthRemarks${docId}">
+  <option id="healthRemarksOption${docId}"></option>
+  <option>Outstanding</option>
+  <option>Excellent</option>
+  <option>Very Good</option>
+  <option>Good</option>
+  <option>Satisfactory</option>
+  <option>Acceptable</option>
+  <option>Basic</option>
+  <option>Not Graded</option>
+  </select><br><br>
+<div class="resultDets"> 
+<h3>GPA:</h3><input type="number" id="editGPA${docId}"  placeholder="Enter Student's GPA"><br>
+<h3>ATTENDENCE:</h3><input type="number" id="editAttendence${docId}" class="editAttendence"placeholder="Enter Student's Attendence"><br>   
+</div>
 
     <button class="save" data-docid="${docId}" id="save">Save <i class="ri-save-2-fill"></i></button>
     </div>
@@ -1222,6 +1600,12 @@ edits.forEach((editButton, index) => {
         document.querySelector(`#editRollno${docId}`).value = data.RollNo;
         document.querySelector(`#editSection${docId}`).value = data.Section;
         document.querySelector(`#editStudentId${docId}`).value = data.StudentId;
+    document.querySelector(`#editGPA${docId}`).value = data.GPA;
+document.querySelector(`#editAttendence${docId}`).value = data.Attendence;
+
+document.querySelector(`#paymentOption${docId}`).textContent= data.PAYMENT; 
+document.querySelector(`#terminalOption${docId}`).textContent= data.TERMINAL; 
+
 
 document.querySelector(`#englishCreditOption${docId}`).textContent = 
 data.Subject.English.EnglishCredit
@@ -1287,6 +1671,35 @@ document.querySelector(`#opt2GradePointOption${docId}`).textContent = data.Subje
 document.querySelector(`#opt2RemarksOption${docId}`).textContent = data.Subject.Opt2.Opt2Remarks;
 
 
+document.querySelector(`#occupationCreditOption${docId}`).textContent = 
+data.Subject.Occupation.OccupationCredit;
+document.querySelector(`#occupationTHOption${docId}`).textContent = 
+data.Subject.Occupation.OccupationTH;
+document.querySelector(`#occupationINOption${docId}`).textContent = 
+data.Subject.Occupation.OccupationIN;
+document.querySelector(`#occupationGradeOption${docId}`).textContent = 
+data.Subject.Occupation.OccupationGrade;
+document.querySelector(`#occupationGradePointOption${docId}`).textContent = 
+data.Subject.Occupation.OccupationGradePoint;
+document.querySelector(`#occupationRemarksOption${docId}`).textContent = 
+data.Subject.Occupation.OccupationRemarks;
+
+document.querySelector(`#healthCreditOption${docId}`).textContent = 
+data.Subject.Health.HealthCredit;
+document.querySelector(`#healthTHOption${docId}`).textContent = 
+data.Subject.Health.HealthTH;
+document.querySelector(`#healthINOption${docId}`).textContent = 
+data.Subject.Health.HealthIN;
+document.querySelector(`#healthGradeOption${docId}`).textContent = 
+data.Subject.Health.HealthGrade;
+document.querySelector(`#healthGradePointOption${docId}`).textContent = 
+data.Subject.Health.HealthGradePoint;
+document.querySelector(`#healthRemarksOption${docId}`).textContent = 
+data.Subject.Health.HealthRemarks;
+
+
+
+
       } 
     } catch (error) {
       console.error("Error fetching document for editing: ", error);
@@ -1309,12 +1722,19 @@ document.querySelector(`#opt2RemarksOption${docId}`).textContent = data.Subject.
   
   
       const docId = this.getAttribute("data-docid");
+
       const updatedData = {
         Name: document.querySelector(`#editName${docId}`).value,
         Grade: document.querySelector(`#editGrade${docId}`).value,
         RollNo: document.querySelector(`#editRollno${docId}`).value,
         Section: document.querySelector(`#editSection${docId}`).value,
         StudentId: document.querySelector(`#editStudentId${docId}`).value,
+        GPA: document.querySelector(`#editGPA${docId}`).value,
+  Attendence: document.querySelector(`#editAttendence${docId}`).value,
+    PAYMENT: document.querySelector(`#paymentEdit${docId}`).value,   
+    TERMINAL: document.querySelector(`#terminalEdit${docId}`).value,    
+        
+        
         Subject:{
 English: {
     EnglishCredit: document.querySelector(`#englishCreditHour${docId}`).value,
@@ -1370,8 +1790,27 @@ Opt2: {
     Opt2IN: document.querySelector(`#opt2IN${docId}`).value,
     Opt2Grade: document.querySelector(`#opt2Grade${docId}`).value,
     Opt2GradePoint: document.querySelector(`#opt2GradePoint${docId}`).value,
-    Opt2Remarks: document.querySelector(`#opt2Remarks${docId}`).value,
-    },
+  Opt2Remarks: document.querySelector(`#opt2Remarks${docId}`).value,
+   
+},
+Occupation: {
+    OccupationCredit: document.querySelector(`#occupationCreditHour${docId}`).value,
+    OccupationTH: document.querySelector(`#occupationTH${docId}`).value,
+    OccupationIN: document.querySelector(`#occupationIN${docId}`).value,
+    OccupationGrade: document.querySelector(`#occupationGrade${docId}`).value,
+    OccupationGradePoint: document.querySelector(`#occupationGradePoint${docId}`).value,
+    OccupationRemarks: document.querySelector(`#occupationRemarks${docId}`).value,
+},
+Health: {
+    HealthCredit: document.querySelector(`#healthCreditHour${docId}`).value,
+    HealthTH: document.querySelector(`#healthTH${docId}`).value,
+    HealthIN: document.querySelector(`#healthIN${docId}`).value,
+    HealthGrade: document.querySelector(`#healthGrade${docId}`).value,
+    HealthGradePoint: document.querySelector(`#healthGradePoint${docId}`).value,
+    HealthRemarks: document.querySelector(`#healthRemarks${docId}`).value
+},
+
+  
     },
       };
       try {
@@ -1413,13 +1852,15 @@ var addOk= document.querySelector("#addOk").addEventListener("click",function(){
     const rollNo = document.querySelector('#InpRollno').value;
     const section = document.querySelector('#Inpsection').value;
     const studentId = document.querySelector('#InpstudentId').value;
-
+var payment = document.querySelector('#payment').value;
 var englishCredit = document.querySelector("#englishCreditHour").value
 var englishTH = document.querySelector("#englishTH").value
 var englishIN = document.querySelector("#englishIN").value
 var englishGrade = document.querySelector("#englishGrade").value;
 var englishGradePoint = document.querySelector("#englishGradePoint").value;
 var englishRemarks = document.querySelector("#englishRemarks").value;
+
+
 
 var nepaliCredit = document.querySelector("#nepaliCreditHour").value;
 var nepaliTH = document.querySelector("#nepaliTH").value;
@@ -1463,6 +1904,27 @@ var opt2Grade = document.querySelector("#opt2Grade").value;
 var opt2GradePoint = document.querySelector("#opt2GradePoint").value;
 var opt2Remarks = document.querySelector("#opt2Remarks").value;
 
+var occupationCredit = document.querySelector("#occupationCreditHour").value;
+var occupationTH = document.querySelector("#occupationTH").value;
+var occupationIN = document.querySelector("#occupationIN").value;
+var occupationGrade = document.querySelector("#occupationGrade").value;
+var occupationGradePoint = document.querySelector("#occupationGradePoint").value;
+var occupationRemarks = document.querySelector("#occupationRemarks").value;
+
+var healthCredit = document.querySelector("#healthCreditHour").value;
+var healthTH = document.querySelector("#healthTH").value;
+var healthIN = document.querySelector("#healthIN").value;
+var healthGrade = document.querySelector("#healthGrade").value;
+var healthGradePoint = document.querySelector("#healthGradePoint").value;
+var healthRemarks = document.querySelector("#healthRemarks").value;
+
+
+
+
+var GPA = document.querySelector("#InpGPA").value;
+var Attendence = document.querySelector("#InpAttendence").value;
+var Payment = document.querySelector("#payment").value;
+var terminal = document.querySelector("#terminal").value
     // Add data to Firestore
     await addDoc(collection(db, "Students"), {
       Name: name,
@@ -1470,6 +1932,10 @@ var opt2Remarks = document.querySelector("#opt2Remarks").value;
       RollNo: rollNo,
       Section: section,
       StudentId: studentId,
+      GPA: GPA,
+      Attendence: Attendence,
+      PAYMENT: Payment,
+      TERMINAL: terminal,
      Subject:{
 English:{
     EnglishCredit: englishCredit,
@@ -1533,10 +1999,26 @@ Opt2:{
     Opt2GradePoint: opt2GradePoint,
     Opt2Remarks: opt2Remarks
 },
+Occupation: {
+    OccupationCredit: occupationCredit,
+    OccupationTH: occupationTH,
+    OccupationIN: occupationIN,
+    OccupationGrade: occupationGrade,
+    OccupationGradePoint: occupationGradePoint,
+    OccupationRemarks: occupationRemarks
+},
+
+Health: {
+    HealthCredit: healthCredit,
+    HealthTH: healthTH,
+    HealthIN: healthIN,
+    HealthGrade: healthGrade,
+    HealthGradePoint: healthGradePoint,
+    HealthRemarks: healthRemarks
+},
 }
 })
     
-
  setupSearch();  
     await fetchData();
   });
